@@ -135,8 +135,8 @@ AUTH_USER_MODEL = 'users.User'
 # Izinkan akses dari Next.js lokal
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://joglodhepis.vercel.app/",
-    "https://joglodhepis-3fbldgm8m-pradipta-dewandarus-projects.vercel.app/",
+    "https://joglodhepis.vercel.app",
+    "https://joglodhepis-3fbldgm8m-pradipta-dewandarus-projects.vercel.app",
 ]
 
 # Konfigurasi Media
