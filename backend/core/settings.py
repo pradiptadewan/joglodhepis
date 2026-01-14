@@ -1,7 +1,8 @@
 """
 Django settings for core project.
 """
-import os  # <--- WAJIB DI PALING ATAS
+import dj_database_url
+import os
 from pathlib import Path
 from dotenv import load_dotenv
 from datetime import timedelta
@@ -16,9 +17,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# Saat deploy pertama kali, biarkan True dulu agar kita bisa lihat error.
+# Nanti kalau sudah lancar, ganti jadi False.
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# --- PERUBAHAN 1: IZINKAN SEMUA HOST (Agar tidak error 400 di Railway) ---
+ALLOWED_HOSTS = ["*"]
+
+# --- PERUBAHAN 2: CSRF TRUSTED ORIGINS (Agar Admin Panel bisa Login di Railway) ---
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.railway.app",
+    "https://*.vercel.app",
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -56,6 +66,7 @@ SIMPLE_JWT = {
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', # Pastikan ini aktif untuk static files
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -83,13 +94,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-# Database
+# --- PERUBAHAN 3: KONFIGURASI DATABASE CERDAS ---
+# Default pakai SQLite (untuk di Laptop)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# Jika Railway memberikan DATABASE_URL (PostgreSQL), pakai itu.
+database_url = os.environ.get("DATABASE_URL")
+if database_url:
+    DATABASES['default'] = dj_database_url.parse(database_url)
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -107,13 +125,18 @@ USE_TZ = True
 
 # Static files
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Arahkan Auth ke model User kita
 AUTH_USER_MODEL = 'users.User'
 
-# Izinkan akses dari Next.js
+# --- CORS SETTINGS ---
+# Izinkan akses dari Next.js lokal
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    # Nanti setelah deploy Frontend ke Vercel, tambahkan domainnya di sini.
+    # Contoh: "https://joglo-frontend.vercel.app",
 ]
 
 # Konfigurasi Media
