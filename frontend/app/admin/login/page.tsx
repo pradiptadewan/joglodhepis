@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Lock, User, Loader2, AlertCircle } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 
-const API_URL = "http://127.0.0.1:8000";
+import { API_URL } from '@/lib/config';
 
 export default function AdminLoginPage() {
   const router = useRouter();

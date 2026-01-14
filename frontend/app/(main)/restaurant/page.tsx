@@ -6,7 +6,7 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useResto, RestoCartItem } from '@/context/RestoContext';
 import toast, { Toaster } from 'react-hot-toast';
 
-const API_URL = "http://127.0.0.1:8000";
+import { API_URL } from '@/lib/config';
 const WA_NUMBER = "6285801262682";
 
 interface Menu {

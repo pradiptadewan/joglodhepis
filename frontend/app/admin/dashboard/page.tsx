@@ -11,7 +11,7 @@ import {
 import { Toaster, toast } from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_URL = "http://127.0.0.1:8000";
+import { API_URL } from '@/lib/config';
 
 interface Order {
   id: number;

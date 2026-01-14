@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const API_URL = "http://127.0.0.1:8000";
+import { API_URL } from '@/lib/config';
 
 interface VWEdukasi {
   id: number;

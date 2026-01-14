@@ -8,7 +8,7 @@ import { useBooking } from '@/context/BookingContext';
 import { useAuth } from '@/context/AuthContext';
 import toast from 'react-hot-toast';
 
-const API_URL = "http://127.0.0.1:8000";
+import { API_URL } from '@/lib/config';
 
 interface Facility {
   id: number;

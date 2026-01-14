@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, Variants } from 'framer-motion';
 import Link from 'next/link';
 
-const API_URL = "http://127.0.0.1:8000";
+import { API_URL } from '@/lib/config';
 
 interface VWPackage {
   id: number;

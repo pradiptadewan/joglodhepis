@@ -7,7 +7,7 @@ import { useBooking } from '@/context/BookingContext';
 import { useResto } from '@/context/RestoContext';
 import Script from 'next/script';
 
-const API_URL = "http://127.0.0.1:8000";
+import { API_URL } from '@/lib/config';
 const MIDTRANS_CLIENT_KEY = "Mid-client-n5aJfMRpnybg_4kl";
 
 declare global {

@@ -10,6 +10,8 @@ import {
   CreditCard, Ban, Timer, Loader2, AlertTriangle, MessageCircle, Wallet
 } from 'lucide-react';
 
+import { API_URL } from '@/lib/config'; 
+
 const MIDTRANS_CLIENT_KEY = process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY || "Mid-client-n5aJfMRpnybg_4kl";
 const HOTEL_WA_NUMBER = "6285801262682";
 
@@ -103,8 +105,7 @@ function OrderHistoryContent() {
       const token = localStorage.getItem('accessToken');
       if (!token) { router.push('/auth/login'); return; }
       
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api';
-      const res = await fetch(`${apiUrl}/orders/`, {
+      const res = await fetch(`${API_URL}/api/orders/`, {
         method: 'GET',
         headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
       });
@@ -119,8 +120,7 @@ function OrderHistoryContent() {
   const updateOrderStatus = async (midtransOrderId: string) => {
     try {
         const token = localStorage.getItem('accessToken');
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api';
-        await fetch(`${apiUrl}/transactions/check-status/`, {
+        await fetch(`${API_URL}/api/transactions/check-status/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -173,8 +173,7 @@ function OrderHistoryContent() {
 
     try {
       const token = localStorage.getItem('accessToken');
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api';
-      const res = await fetch(`${apiUrl}/orders/${orderToCancel}/cancel/`, {
+      const res = await fetch(`${API_URL}/api/orders/${orderToCancel}/cancel/`, {
         method: 'POST', 
         headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
       });
@@ -192,8 +191,7 @@ function OrderHistoryContent() {
     setProcessingId(orderId);
     try {
       const token = localStorage.getItem('accessToken');
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api';
-      const res = await fetch(`${apiUrl}/orders/${orderId}/pay/`, {
+      const res = await fetch(`${API_URL}/api/orders/${orderId}/pay/`, {
         method: 'POST', 
         headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
       });
