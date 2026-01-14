@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback, useRef, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Toaster, toast } from 'react-hot-toast';
 import Script from 'next/script';
@@ -10,7 +10,7 @@ import {
   CreditCard, Ban, Timer, Loader2, AlertTriangle, MessageCircle, Wallet
 } from 'lucide-react';
 
-const MIDTRANS_CLIENT_KEY = "Mid-client-n5aJfMRpnybg_4kl";
+const MIDTRANS_CLIENT_KEY = process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY || "Mid-client-n5aJfMRpnybg_4kl";
 const HOTEL_WA_NUMBER = "6285801262682";
 
 declare global {
@@ -86,7 +86,7 @@ const CountdownTimer = ({ createdAt, onExpire }: { createdAt: string, onExpire: 
   return <span className="font-mono font-bold text-red-600 bg-white px-2 py-0.5 rounded border border-red-100">{timeLeft}</span>;
 };
 
-export default function OrderHistoryPage() {
+function OrderHistoryContent() {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
   const [processingId, setProcessingId] = useState<number | null>(null);
@@ -184,6 +184,11 @@ export default function OrderHistoryPage() {
   };
 
   const handleContinuePayment = async (orderId: number) => {
+    if (typeof window !== 'undefined' && !window.snap) {
+        toast.loading("Sistem pembayaran sedang dimuat, coba sesaat lagi...");
+        return;
+    }
+
     setProcessingId(orderId);
     try {
       const token = localStorage.getItem('accessToken');
@@ -535,5 +540,17 @@ Mohon diproses. Terima kasih.`;
         )}
       </div>
     </div>
+  );
+}
+
+export default function OrderHistoryPage() {
+  return (
+    <Suspense fallback={
+        <div className="min-h-screen flex items-center justify-center bg-[#FDFCF8]">
+            <Loader2 className="animate-spin text-[#BFA06D]" />
+        </div>
+    }>
+      <OrderHistoryContent />
+    </Suspense>
   );
 }
