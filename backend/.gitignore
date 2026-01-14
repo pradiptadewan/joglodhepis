@@ -1,0 +1,23 @@
+# Python & Django default ignores
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Environment variables (SANGAT PENTING)
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Folder misterius yang ada di screenshot Anda
+vw/
