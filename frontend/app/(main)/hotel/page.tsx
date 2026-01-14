@@ -646,6 +646,7 @@ function SearchContent() {
                       const guests = Number(searchParams.guests) || 2;
 
                       addToCart({
+                        id: selectedRoom.id,
                         roomId: selectedRoom.id,
                         roomName: selectedRoom.name,
                         price: Number(selectedRoom.price),
