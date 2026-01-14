@@ -12,3 +12,4 @@ django-filter
 django-crispy-forms
 django-widget-tweaks
 requests
+APScheduler
