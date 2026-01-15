@@ -1,5 +1,5 @@
 "use client";
-
+import { API_URL } from '@/lib/config';
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
@@ -242,7 +242,7 @@ export default function Home() {
   useEffect(() => {
     const fetchRooms = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/rooms');
+        const response = await fetch(`${API_URL}/api/rooms`);
         const data = await response.json();
         setRooms(data);
         setLoading(false);
@@ -1122,5 +1122,3 @@ const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
-
-// test deploy

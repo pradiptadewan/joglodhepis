@@ -1,12 +1,11 @@
 "use client";
-
+import { API_URL } from '@/lib/config';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useResto, RestoCartItem } from '@/context/RestoContext';
 import toast, { Toaster } from 'react-hot-toast';
 
-import { API_URL } from '@/lib/config';
 const WA_NUMBER = "6285801262682";
 
 interface Menu {

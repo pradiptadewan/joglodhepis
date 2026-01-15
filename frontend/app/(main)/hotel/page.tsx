@@ -1,5 +1,6 @@
 "use client";
 
+import { API_URL } from '@/lib/config';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -7,8 +8,6 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useBooking } from '@/context/BookingContext';
 import { useAuth } from '@/context/AuthContext';
 import toast from 'react-hot-toast';
-
-import { API_URL } from '@/lib/config';
 
 interface Facility {
   id: number;
