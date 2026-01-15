@@ -10,10 +10,7 @@ import {
   CreditCard, Ban, Timer, Loader2, AlertTriangle, MessageCircle, Wallet
 } from 'lucide-react';
 
-import { API_URL } from '@/lib/config'; 
-
-const MIDTRANS_CLIENT_KEY = process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY || "Mid-client-n5aJfMRpnybg_4kl";
-const HOTEL_WA_NUMBER = "6285801262682";
+import { API_URL, MIDTRANS_CLIENT_KEY, HOTEL_WA_NUMBER } from '@/lib/config';
 
 declare global {
   interface Window {

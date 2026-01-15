@@ -7,8 +7,7 @@ import { useBooking } from '@/context/BookingContext';
 import { useResto } from '@/context/RestoContext';
 import Script from 'next/script';
 
-import { API_URL } from '@/lib/config';
-const MIDTRANS_CLIENT_KEY = "Mid-client-n5aJfMRpnybg_4kl";
+import { API_URL, MIDTRANS_CLIENT_KEY } from '@/lib/config';
 
 declare global {
   interface Window {
