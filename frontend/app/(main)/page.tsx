@@ -498,83 +498,112 @@ export default function Home() {
       <div className="h-20"></div>
 
       {/* VIDEO SECTION */}
-      <motion.section 
-        className="relative w-full -mt-20"
+      <motion.section
+        className="relative w-full bg-[#050505] pt-10 pb-16 md:py-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUp}
-      > 
+      >
+        {/* Teks Atas Sederhana */}
+        <div className="max-w-5xl mx-auto px-5 md:px-8">
+          <div className="space-y-3 text-center md:text-left">
+            <p className="text-[10px] tracking-[0.35em] text-[#BFA06D]/80 uppercase">
+              Joglo Dhepis
+            </p>
+            <h2 className="text-2xl md:text-3xl font-semibold text-white leading-snug">
+              Sebelum Datang,  
+              <span className="text-[#BFA06D]"> Rasakan Suasananya</span>
+            </h2>
+            <p className="text-sm md:text-base text-gray-300/85 max-w-xl mx-auto md:mx-0">
+              Satu video singkat untuk melihat nuansa hangat dan elegan Joglo Dhepis.
+            </p>
+          </div>
+        </div>
 
-        <div className="relative z-20 w-full bg-[#BFA06D] py-12 shadow-xl">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center text-center">
-              <div className="flex flex-col items-center gap-3 group cursor-pointer">
-                <svg className="w-8 h-8 text-white group-hover:scale-110 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span className="text-white text-xs font-bold tracking-[0.2em]">BOOK NOW</span>
+        {/* VIDEO CARD */}
+        <div className="mt-8 md:mt-10">
+          <div className="max-w-5xl mx-auto px-5 md:px-8">
+            <div className="relative overflow-hidden rounded-3xl border border-white/8 bg-black/40 shadow-[0_24px_70px_rgba(0,0,0,0.75)]">
+              {/* Badge Kecil */}
+              <div className="absolute left-4 top-4 z-20 inline-flex items-center gap-2 rounded-full bg-black/55 px-3 py-1.5 backdrop-blur-md">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-gray-100/80">
+                  Homestay Preview
+                </span>
               </div>
-              <div className="flex flex-col items-center gap-3 group cursor-pointer">
-                <svg className="w-8 h-8 text-white group-hover:scale-110 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4" />
-                </svg>
-                <span className="text-white text-xs font-bold tracking-[0.2em]">PLAN YOUR TRIP</span>
+
+              {/* Container Video */}
+              <div className="relative w-full aspect-[9/16] sm:aspect-video lg:h-[420px] group">
+                <video
+                  ref={videoRef}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src="/videos/video.mp4" type="video/mp4" />
+                </video>
+
+                {/* Overlay sederhana */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10" />
+
+                {/* Tombol Play + Text */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 text-center">
+                  <button
+                    onClick={togglePlay}
+                    className="flex h-16 w-16 items-center justify-center rounded-full bg-white/18 backdrop-blur-xl border border-white/40 shadow-[0_18px_55px_rgba(0,0,0,0.8)] hover:scale-105 hover:bg-white/25 transition-transform duration-300 md:h-18 md:w-18"
+                  >
+                    {isPlaying ? (
+                      <div className="flex gap-1.5">
+                        <div className="h-7 w-1.5 rounded-full bg-white shadow-lg" />
+                        <div className="h-7 w-1.5 rounded-full bg-white shadow-lg" />
+                      </div>
+                    ) : (
+                      <div className="ml-1 w-0 h-0 border-l-[18px] border-l-white border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent drop-shadow-xl" />
+                    )}
+                  </button>
+
+                  <div className="space-y-1 max-w-sm">
+                    <p className="text-[11px] tracking-[0.22em] uppercase text-gray-200/85">
+                      {isPlaying ? "Now Playing" : "Tap to Play"}
+                    </p>
+                    <p className="text-sm md:text-base text-gray-100/90">
+                      {isPlaying
+                        ? "Nikmati tur singkat ke dalam Joglo Dhepis."
+                        : "Sentuh tombol untuk melihat suasana villa secara langsung."}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Status Bawah */}
+                <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-black/55 px-4 py-1.5 text-[10px] md:text-xs font-medium text-gray-100 backdrop-blur-md border border-white/15">
+                    <span
+                      className={`h-1.5 w-1.5 rounded-full ${
+                        isPlaying ? "bg-emerald-400" : "bg-yellow-300"
+                      } animate-pulse`}
+                    />
+                    <span className="tracking-[0.18em] uppercase">
+                      {isPlaying ? "Playing Video" : "Paused"}
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col items-center gap-3 group cursor-pointer">
-                <svg className="w-8 h-8 text-white group-hover:scale-110 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6" />
-                </svg>
-                <span className="text-white text-xs font-bold tracking-[0.2em]">START EXPLORING</span>
-              </div>
-              <div className="flex flex-col items-center gap-3 group cursor-pointer">
-                <svg className="w-8 h-8 text-white group-hover:scale-110 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132z" />
-                </svg>
-                <span className="text-white text-xs font-bold tracking-[0.2em]">WATCH & BE INSPIRED</span>
+
+              {/* Bar Bawah Ringkas */}
+              <div className="border-t border-white/10 bg-black/70 px-5 py-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <p className="text-xs md:text-sm text-gray-300/85">
+                  Siap pesan? Lanjutkan ke halaman booking kapan saja setelah menonton.
+                </p>
+                <button className="inline-flex items-center justify-center rounded-full bg-[#BFA06D] px-4 py-2 text-[10px] md:text-xs font-semibold tracking-[0.18em] uppercase text-black/90 hover:bg-[#cfb27e] transition-colors">
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
         </div>
-        
-        {/* Container Video */}
-        <div className="relative w-full h-screen overflow-hidden group">
-          <video
-            ref={videoRef}
-            className="absolute inset-0 w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src="/videos/video.mp4" type="video/mp4" />
-          </video>
-
-          <div className={`absolute inset-0 bg-black/20 transition-opacity duration-300 ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`} />
-          
-          <div className={`absolute inset-0 flex items-center justify-center z-10 transition-all duration-300 ${isPlaying ? 'opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100' : 'opacity-100 scale-100'}`}>
-            <button 
-              onClick={togglePlay}
-              className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-md border border-white/50 flex items-center justify-center hover:scale-110 hover:bg-white/30 transition duration-300 shadow-2xl"
-            >
-              {isPlaying ? (
-                <div className="flex gap-2">
-                   <div className="w-2 h-8 bg-white rounded-full shadow-lg" />
-                   <div className="w-2 h-8 bg-white rounded-full shadow-lg" />
-                </div>
-              ) : (
-                <div className="w-0 h-0 border-l-[24px] border-l-white border-t-[16px] border-t-transparent border-b-[16px] border-b-transparent ml-2 shadow-lg" />
-              )}
-            </button>
-          </div>
-
-          <div className={`absolute bottom-20 w-full text-center pointer-events-none transition-opacity duration-300 ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
-             <span className="text-white/80 text-sm tracking-widest uppercase font-semibold drop-shadow-md">
-                {isPlaying ? "Playing Video" : "Paused"}
-             </span>
-          </div>
-        </div>
-
       </motion.section>
 
       {/* FASILITAS SECTION */}

@@ -150,7 +150,7 @@ export default function VWTourList() {
                     </p>
                     
                     <span className="inline-block text-xs uppercase tracking-[0.2em] border-b border-[#2D2D2D] pb-1 group-hover:border-[#BFA06D] group-hover:text-[#BFA06D] transition-all font-bold">
-                      View Itinerary
+                      View Details
                     </span>
                   </div>
                 </Link>
