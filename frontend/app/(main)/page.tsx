@@ -55,7 +55,6 @@ const roomVariants: Variants = {
 };
 
 export default function Home() {
-  console.log("DEBUG API URL:", process.env.NEXT_PUBLIC_API_URL);
   const router = useRouter();
   const [direction, setDirection] = useState(0);
   const [activeSlide, setActiveSlide] = useState(0);

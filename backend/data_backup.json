@@ -1,0 +1,4035 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-12-24T06:50:59.124Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "DeluxxeRoom",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-12-24T06:51:32.095Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Family Room",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-12-24T06:52:07.726Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Paket 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-12-24T06:52:10.636Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Paket 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-12-24T06:53:03.745Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Nasi Goreng",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-12-24T06:54:12.676Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Ayam Goreng",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-12-24T06:55:00.085Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Candi Borobudur",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-12-24T06:55:36.087Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Short",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-12-24T14:54:33.691Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Deluxe Room",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-12-24T14:54:48.987Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Deluxe Room",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-12-24T14:55:13.007Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Family Room",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-12-24T14:55:28.212Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Family Room",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-12-25T16:45:15.440Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Family Room (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-12-25T16:45:21.285Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Family Room (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-12-25T16:45:30.013Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Family Room (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-12-25T16:45:38.541Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Deluxe Room (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-12-25T17:06:36.144Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Standard Room A (Standard Room (2 Person))",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"room image\", \"object\": \"Image for Standard Room A\"}}, {\"added\": {\"name\": \"room image\", \"object\": \"Image for Standard Room A\"}}, {\"added\": {\"name\": \"room image\", \"object\": \"Image for Standard Room A\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-12-25T17:42:17.423Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Paket 1 (Paket)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-12-25T17:44:14.533Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Paket 1 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Package content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-12-25T17:47:42.071Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Paket 1 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-12-25T17:48:52.585Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Paket 2 (Paket)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-12-25T17:49:46.735Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Paket 2 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Package content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-12-25T18:22:31.645Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Paket 2 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Package content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-12-26T15:54:43.443Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "AC",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-12-26T15:54:50.026Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "2",
+    "object_repr": "Kamar Mandi Dalam",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-12-26T15:54:53.456Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "3",
+    "object_repr": "Water Heather",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-12-26T15:54:56.625Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "4",
+    "object_repr": "Wifi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-12-26T15:55:01.072Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "5",
+    "object_repr": "Parkiran Luas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-12-26T15:55:12.407Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "6",
+    "object_repr": "TV",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-12-26T15:55:21.303Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "7",
+    "object_repr": "Alat Mandi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-12-26T15:55:54.419Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Standard Room A (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Facilities\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-12-26T15:57:38.986Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Standard Room (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Facilities\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-12-26T15:57:52.280Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Standard Room 1 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-12-26T15:58:04.474Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Family Room (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Facilities\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-12-26T15:58:44.227Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Standard Room (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Total rooms\", \"Facilities\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-12-26T15:58:50.604Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Standard Room 2 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-12-26T15:58:56.702Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Family Room 1 (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-12-26T15:59:12.951Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Standard Room 3 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Total rooms\", \"Facilities\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-12-26T15:59:22.972Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Family Room 2 (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Facilities\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-12-26T15:59:37.529Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Family Room 3 (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Total rooms\", \"Facilities\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-12-26T15:59:48.043Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Standard Room 4 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Total rooms\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-12-26T16:08:10.215Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Standard Room 4 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Letak Kamar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-12-26T16:09:04.099Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Standard Room 5 (Standard Room (2 Person))",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-12-26T16:09:55.533Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Standard Room 6 (Standard Room (2 Person))",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-12-26T16:10:37.989Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Standard Room 7 (Standard Room (2 Person))",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-12-26T16:11:01.218Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Standard Room 5 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-12-26T16:17:32.230Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Standard Room 7 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-12-26T16:17:38.518Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Family Room 1 (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Total rooms\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-12-26T16:18:09.664Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Standard Room 1 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Total rooms\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-12-26T16:18:17.405Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Standard Room 6 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Total rooms\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-12-26T16:18:22.523Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Family Room 2 (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Total rooms\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-12-26T16:19:01.888Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Standard Room 7 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Letak Kamar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-12-26T16:20:57.114Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "tes (Paket)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-12-26T16:39:11.164Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "Es Teh",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-12-26T16:54:58.558Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "Es Teh",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-12-26T16:59:07.376Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Ayam Goreng (Harian)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ada Opsi Rasa?\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-12-26T16:59:22.002Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Ayam Goreng (Harian)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ada Opsi Rasa?\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-12-26T16:59:28.098Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Nasi Goreng (Harian)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Ada Opsi Rasa?\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-12-26T17:15:14.903Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Short Trip",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-12-26T17:16:32.920Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Short",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-01-12T15:18:55.788Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Standard Room 7 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-01-12T15:20:18.730Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Standard Room 6 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-01-12T15:20:26.481Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Standard Room 5 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-01-12T15:20:34.345Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Standard Room 4 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-01-12T15:20:42.263Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Family Room 3 (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-01-12T15:20:50.929Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Family Room 2 (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-01-12T15:20:58.901Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Standard Room 3 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-01-12T15:21:04.800Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Standard Room 2 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-01-12T15:21:12.622Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Family Room 1 (Family Room (4 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-01-12T15:21:19.913Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Standard Room 1 (Standard Room (2 Person))",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price per night\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-01-12T15:25:27.251Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Ayam Goreng (Harian)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-01-12T15:25:33.173Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Nasi Goreng (Harian)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-01-12T15:25:41.310Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Paket 1 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-01-12T15:25:54.541Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Paket 2 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-01-12T15:26:01.396Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "tes (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-01-12T15:27:55.127Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "2",
+    "object_repr": "Es Jeruk",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-01-12T15:28:23.332Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "3",
+    "object_repr": "Kopi Hitam",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-01-12T15:28:45.627Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "Es Teh",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "40",
+    "object_repr": "Order #40 - tes@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "39",
+    "object_repr": "Order #39 - tes@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "38",
+    "object_repr": "Order #38 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "37",
+    "object_repr": "Order #37 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "36",
+    "object_repr": "Order #36 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "35",
+    "object_repr": "Order #35 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "34",
+    "object_repr": "Order #34 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "33",
+    "object_repr": "Order #33 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "32",
+    "object_repr": "Order #32 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "31",
+    "object_repr": "Order #31 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "30",
+    "object_repr": "Order #30 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "29",
+    "object_repr": "Order #29 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "28",
+    "object_repr": "Order #28 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "27",
+    "object_repr": "Order #27 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "26",
+    "object_repr": "Order #26 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "25",
+    "object_repr": "Order #25 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "24",
+    "object_repr": "Order #24 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "23",
+    "object_repr": "Order #23 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "22",
+    "object_repr": "Order #22 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "21",
+    "object_repr": "Order #21 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "20",
+    "object_repr": "Order #20 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "19",
+    "object_repr": "Order #19 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "18",
+    "object_repr": "Order #18 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "17",
+    "object_repr": "Order #17 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "16",
+    "object_repr": "Order #16 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "15",
+    "object_repr": "Order #15 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "14",
+    "object_repr": "Order #14 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "13",
+    "object_repr": "Order #13 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "12",
+    "object_repr": "Order #12 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "11",
+    "object_repr": "Order #11 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "10",
+    "object_repr": "Order #10 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "9",
+    "object_repr": "Order #9 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "Order #8 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "7",
+    "object_repr": "Order #7 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "Order #6 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "Order #5 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "Order #4 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Order #3 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Order #2 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2026-01-12T17:21:57.447Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Order #1 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2026-01-12T17:45:44.770Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "42",
+    "object_repr": "Order #42 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2026-01-12T17:45:44.770Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "41",
+    "object_repr": "Order #41 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2026-01-12T18:04:48.227Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "44",
+    "object_repr": "Order #44 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2026-01-12T18:04:48.227Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "43",
+    "object_repr": "Order #43 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2026-01-13T06:15:25.126Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "51",
+    "object_repr": "Order #51 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2026-01-13T06:15:25.126Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "50",
+    "object_repr": "Order #50 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2026-01-13T06:15:25.126Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "49",
+    "object_repr": "Order #49 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2026-01-13T06:15:25.126Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "48",
+    "object_repr": "Order #48 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2026-01-13T06:15:25.126Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "47",
+    "object_repr": "Order #47 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2026-01-13T06:15:25.126Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "46",
+    "object_repr": "Order #46 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2026-01-13T06:15:25.126Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "45",
+    "object_repr": "Order #45 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2026-01-13T06:50:17.287Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "54",
+    "object_repr": "Order #54 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2026-01-13T06:50:17.287Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "53",
+    "object_repr": "Order #53 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2026-01-13T06:50:17.287Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "52",
+    "object_repr": "Order #52 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2026-01-13T12:00:06.746Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "59",
+    "object_repr": "Order #59 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2026-01-13T12:00:06.746Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "58",
+    "object_repr": "Order #58 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2026-01-13T12:00:06.746Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "57",
+    "object_repr": "Order #57 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2026-01-13T12:00:06.747Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "56",
+    "object_repr": "Order #56 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2026-01-13T12:00:06.747Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "55",
+    "object_repr": "Order #55 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "70",
+    "object_repr": "Order #70 - way@way.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "69",
+    "object_repr": "Order #69 - way@way.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "68",
+    "object_repr": "Order #68 - way@way.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "67",
+    "object_repr": "Order #67 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "66",
+    "object_repr": "Order #66 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "65",
+    "object_repr": "Order #65 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "64",
+    "object_repr": "Order #64 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "63",
+    "object_repr": "Order #63 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "62",
+    "object_repr": "Order #62 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "61",
+    "object_repr": "Order #61 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2026-01-14T06:43:23.623Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "60",
+    "object_repr": "Order #60 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2026-01-14T07:00:19.933Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "72",
+    "object_repr": "Order #72 - way@way.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2026-01-14T07:00:19.933Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "71",
+    "object_repr": "Order #71 - way@way.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2026-01-14T07:03:59.687Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "2",
+    "object_repr": "Jeruk",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2026-01-14T07:04:04.514Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "1",
+    "object_repr": "Teh",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2026-01-14T07:04:49.154Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "4",
+    "object_repr": "Susu Putih",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2026-01-14T07:07:26.764Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "5",
+    "object_repr": "Susu Coklat",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2026-01-14T07:07:32.445Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "4",
+    "object_repr": "Susu Putih",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2026-01-14T07:22:26.652Z",
+    "user": 1,
+    "content_type": 18,
+    "object_id": "6",
+    "object_repr": "Kopi GoodDay",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2026-01-14T07:25:27.960Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Mie Rebus (Harian)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2026-01-14T07:25:54.639Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Mie Goreng (Harian)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2026-01-14T07:26:55.230Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Ayam Goreng (Harian)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2026-01-14T07:27:13.070Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Nasi Goreng (Harian)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2026-01-14T07:31:01.889Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Paket 1 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Package content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2026-01-14T07:31:53.230Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Paket 2 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Package content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2026-01-14T07:33:12.771Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Paket 3 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Price\", \"Package content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2026-01-14T07:33:45.917Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Paket 4 (Paket)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2026-01-14T07:34:32.617Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Paket 5 (Paket)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2026-01-14T07:35:18.972Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Paket 6 (Paket)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2026-01-14T07:35:56.322Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Paket 7 (Paket)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2026-01-14T07:41:14.910Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Paket 1 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2026-01-14T07:41:31.132Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Paket 2 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2026-01-14T07:41:37.548Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Paket 3 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2026-01-14T07:41:43.565Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Paket 4 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2026-01-14T07:41:49.280Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Paket 5 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2026-01-14T07:41:55.139Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Paket 6 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2026-01-14T07:42:02.311Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Paket 7 (Paket)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2026-01-14T08:11:31.962Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "76",
+    "object_repr": "Order #76 - way@way.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2026-01-14T08:11:31.962Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "75",
+    "object_repr": "Order #75 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 177,
+  "fields": {
+    "action_time": "2026-01-14T08:11:31.962Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "74",
+    "object_repr": "Order #74 - pradiptadwn13@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 178,
+  "fields": {
+    "action_time": "2026-01-14T08:11:31.962Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "73",
+    "object_repr": "Order #73 - way@way.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 179,
+  "fields": {
+    "action_time": "2026-01-14T08:20:11.564Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "77",
+    "object_repr": "Order #77 - way@way.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 180,
+  "fields": {
+    "action_time": "2026-01-14T11:45:50.834Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Medium Trip",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 181,
+  "fields": {
+    "action_time": "2026-01-14T11:47:07.598Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Short Trip",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 182,
+  "fields": {
+    "action_time": "2026-01-14T11:48:15.303Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Long Trip",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 183,
+  "fields": {
+    "action_time": "2026-01-14T11:48:56.954Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Sunrise Trip",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 184,
+  "fields": {
+    "action_time": "2026-01-14T11:49:27.601Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Short Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\", \"Price\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 185,
+  "fields": {
+    "action_time": "2026-01-14T11:49:44.695Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Medium Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2026-01-14T11:50:32.798Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Long Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2026-01-14T11:51:06.085Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Short Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2026-01-14T11:51:18.330Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Medium Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2026-01-14T11:51:29.756Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Sunrise Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2026-01-14T11:59:29.424Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Svarga Bumi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2026-01-14T12:00:23.368Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Bukit Rhema",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 192,
+  "fields": {
+    "action_time": "2026-01-14T12:00:48.996Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Lap. Tuksongo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 193,
+  "fields": {
+    "action_time": "2026-01-14T12:01:13.655Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Watu Putih",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 194,
+  "fields": {
+    "action_time": "2026-01-14T12:01:28.960Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "Taman Kelinci",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 195,
+  "fields": {
+    "action_time": "2026-01-14T12:01:50.583Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Junk Yard",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 196,
+  "fields": {
+    "action_time": "2026-01-14T12:02:11.356Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "Persawahan Mandala",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 197,
+  "fields": {
+    "action_time": "2026-01-14T12:02:32.503Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Short Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Destinations\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 198,
+  "fields": {
+    "action_time": "2026-01-14T12:02:41.686Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Medium Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Destinations\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 199,
+  "fields": {
+    "action_time": "2026-01-14T12:02:49.608Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Long Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Destinations\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 200,
+  "fields": {
+    "action_time": "2026-01-14T12:02:55.514Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Sunrise Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Destinations\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 201,
+  "fields": {
+    "action_time": "2026-01-14T12:23:51.975Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "1",
+    "object_repr": "Budidaya Lebah Madu",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 202,
+  "fields": {
+    "action_time": "2026-01-14T12:24:34.533Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2",
+    "object_repr": "Budidaya Jamur",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 203,
+  "fields": {
+    "action_time": "2026-01-14T12:24:53.998Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "3",
+    "object_repr": "Perah Susu Kambing Etawa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 204,
+  "fields": {
+    "action_time": "2026-01-14T12:25:10.122Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "4",
+    "object_repr": "Edukasi Gula Jawa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 205,
+  "fields": {
+    "action_time": "2026-01-14T12:25:36.366Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "5",
+    "object_repr": "Edukasi Pati Aren",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 206,
+  "fields": {
+    "action_time": "2026-01-14T12:26:05.277Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "6",
+    "object_repr": "Edukasi Rengginan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 207,
+  "fields": {
+    "action_time": "2026-01-14T12:26:27.738Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "7",
+    "object_repr": "Edukasi Tahu",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 208,
+  "fields": {
+    "action_time": "2026-01-14T12:26:45.400Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "8",
+    "object_repr": "Gerabah",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 209,
+  "fields": {
+    "action_time": "2026-01-14T12:26:57.513Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "9",
+    "object_repr": "Membatik",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 210,
+  "fields": {
+    "action_time": "2026-01-14T12:27:08.081Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Short Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Educations\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 211,
+  "fields": {
+    "action_time": "2026-01-14T12:27:13.427Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Medium Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Educations\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 212,
+  "fields": {
+    "action_time": "2026-01-14T12:27:18.111Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Long Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Educations\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 213,
+  "fields": {
+    "action_time": "2026-01-14T12:27:22.949Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Sunrise Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Educations\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 214,
+  "fields": {
+    "action_time": "2026-01-14T12:33:31.350Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Short Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 215,
+  "fields": {
+    "action_time": "2026-01-14T12:34:38.559Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Short Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 216,
+  "fields": {
+    "action_time": "2026-01-14T12:39:39.526Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Medium Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 217,
+  "fields": {
+    "action_time": "2026-01-14T12:39:48.204Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Long Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 218,
+  "fields": {
+    "action_time": "2026-01-14T12:40:50.369Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Sunrise Trip",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9g1lu44yrqz84ntzn8zp0qjigcleoanx",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hA-7QNcuu8ZCO8BUjWQlHZlvLsh6UK3M5N5Mx-Ovfijp82vkV2ZZJdfhoGeqQ4RH6HeG6dW921FPhJ-2s6XFtPrdrZ_gxJ6GVsDZiabIaMDJcFiJpmTAWFdREKRXCQBdqKg5qSVBnACRNbZBoWTY58v4ls3uQ:1vYQF0:6O2cZ73W-hKGJWyIv3VBhDCRN3TThd-k_IKmOTtypyg",
+    "expire_date": "2026-01-07T14:53:30.026Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ergu2gby2un9my761yxpiyytlkwyxprd",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hA-7QNcuu8ZCO8BUjWQlHZlvLsh6UK3M5N5Mx-Ovfijp82vkV2ZZJdfhoGeqQ4RH6HeG6dW921FPhJ-2s6XFtPrdrZ_gxJ6GVsDZiabIaMDJcFiJpmTAWFdREKRXCQBdqKg5qSVBnACRNbZBoWTY58v4ls3uQ:1vfCF3:UBlhMHWmaEg1hwT0h1bQJ6OddvBpH4RJ3e0CpAYxIl0",
+    "expire_date": "2026-01-26T07:21:33.061Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pvoovvu1ct81kz9y93is8erul0thfu8f",
+  "fields": {
+    "session_data": ".eJxVjM0OwiAQhN-FsyH8tEU8evcZyMLuStVAUtqT8d0tSQ86x2--mbcIsK05bI2WMKO4CC1OvyxCelLpBT6g3KtMtazLHGVX5NE2eatIr-vh_h1kaLmvRwbtjZn2sHUEmqMyiAResR_0eUjoyPiJARNjGmOKO7SK2XrtjPh8AfuBOJg:1vYIeq:eWuhEgpRThz5ufKFJD6Lw8t451w8xHDfwZAx3AUPHIY",
+    "expire_date": "2026-01-07T06:47:40.327Z"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$t3peEgP4CHulg3c20wlsGN$CbLJvJxsnRxVQgEYgELRBAeW25IT2hflWBFIIqTF5+Q=",
+    "last_login": "2026-01-12T07:21:33.056Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-12-24T06:38:45.249Z",
+    "email": "admin@admin.com",
+    "phone_number": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$duGzMxaNCSFBgz1qsYoiZ1$5aiFZx7xX/tjZA15EDj4y1tOug0tqURkCBe/Z/iqV3g=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "pradiptadwn13@gmail.com",
+    "first_name": "Pradipta",
+    "last_name": "Dewan",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-12T07:20:27.691Z",
+    "email": "pradiptadwn13@gmail.com",
+    "phone_number": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$rV4KRqyZtbhajYWh5JotJK$heUKgsbHUij4F0+zTlPAiHUVA6D+lNhG7mUh2ZWk2YI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "way@way.com",
+    "first_name": "way",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-12T07:24:55.780Z",
+    "email": "way@way.com",
+    "phone_number": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$D5qOzpWZentDvqSYKlYKzA$4O3EVDB+iYhD1TXwRCCe4ehuNWNs/sIeNAJY4J8c7BM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tes@gmail.com",
+    "first_name": "tes",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-12T07:27:33.101Z",
+    "email": "tes@gmail.com",
+    "phone_number": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "hotel.facility",
+  "pk": 1,
+  "fields": {
+    "name": "AC"
+  }
+},
+{
+  "model": "hotel.facility",
+  "pk": 2,
+  "fields": {
+    "name": "Kamar Mandi Dalam"
+  }
+},
+{
+  "model": "hotel.facility",
+  "pk": 3,
+  "fields": {
+    "name": "Water Heather"
+  }
+},
+{
+  "model": "hotel.facility",
+  "pk": 4,
+  "fields": {
+    "name": "Wifi"
+  }
+},
+{
+  "model": "hotel.facility",
+  "pk": 5,
+  "fields": {
+    "name": "Parkiran Luas"
+  }
+},
+{
+  "model": "hotel.facility",
+  "pk": 6,
+  "fields": {
+    "name": "TV"
+  }
+},
+{
+  "model": "hotel.facility",
+  "pk": 7,
+  "fields": {
+    "name": "Alat Mandi"
+  }
+},
+{
+  "model": "hotel.roomtype",
+  "pk": 1,
+  "fields": {
+    "name": "Standard Room 1",
+    "location": "Lantai 1",
+    "category": "standard",
+    "price_per_night": "200000.00",
+    "capacity": 2,
+    "description": "Standard Room",
+    "image": "room_types/family.jpeg",
+    "total_rooms": 1,
+    "facilities": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "hotel.roomtype",
+  "pk": 2,
+  "fields": {
+    "name": "Family Room 1",
+    "location": "Lantai 1",
+    "category": "family",
+    "price_per_night": "350000.00",
+    "capacity": 4,
+    "description": "Family Room",
+    "image": "room_types/room2.jpeg",
+    "total_rooms": 1,
+    "facilities": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "hotel.roomtype",
+  "pk": 3,
+  "fields": {
+    "name": "Standard Room 2",
+    "location": "Lantai 1",
+    "category": "standard",
+    "price_per_night": "200000.00",
+    "capacity": 2,
+    "description": "Mantap",
+    "image": "room_types/room1_MFLuOmH.jpeg",
+    "total_rooms": 1,
+    "facilities": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "hotel.roomtype",
+  "pk": 4,
+  "fields": {
+    "name": "Standard Room 3",
+    "location": "Lantai 1",
+    "category": "standard",
+    "price_per_night": "200000.00",
+    "capacity": 2,
+    "description": "Josjis",
+    "image": "room_types/room1_BNwC6tO.jpeg",
+    "total_rooms": 1,
+    "facilities": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "hotel.roomtype",
+  "pk": 5,
+  "fields": {
+    "name": "Family Room 2",
+    "location": "Lantai 1",
+    "category": "family",
+    "price_per_night": "350000.00",
+    "capacity": 4,
+    "description": "Bagus banget",
+    "image": "room_types/family_U02AsMo.jpeg",
+    "total_rooms": 1,
+    "facilities": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "hotel.roomtype",
+  "pk": 6,
+  "fields": {
+    "name": "Family Room 3",
+    "location": "Lantai 1",
+    "category": "family",
+    "price_per_night": "350000.00",
+    "capacity": 4,
+    "description": "Keren boss",
+    "image": "room_types/room2_YSQb91P.jpeg",
+    "total_rooms": 1,
+    "facilities": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "hotel.roomtype",
+  "pk": 7,
+  "fields": {
+    "name": "Standard Room 4",
+    "location": "Lantai 2",
+    "category": "standard",
+    "price_per_night": "150000.00",
+    "capacity": 2,
+    "description": "Ini adalah kamar standard dengan kapasitas 2 orang",
+    "image": "room_types/room2_8AhBCYZ.jpeg",
+    "total_rooms": 1,
+    "facilities": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "hotel.roomtype",
+  "pk": 8,
+  "fields": {
+    "name": "Standard Room 5",
+    "location": "Lantai 2",
+    "category": "standard",
+    "price_per_night": "150000.00",
+    "capacity": 2,
+    "description": "Kamar bagus di lantai 2",
+    "image": "room_types/family_lmWJdTH.jpeg",
+    "total_rooms": 1,
+    "facilities": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "hotel.roomtype",
+  "pk": 9,
+  "fields": {
+    "name": "Standard Room 6",
+    "location": "Lantai 2",
+    "category": "standard",
+    "price_per_night": "150000.00",
+    "capacity": 2,
+    "description": "Kamus keren",
+    "image": "room_types/family_U02AsMo_4lRhAAZ.jpeg",
+    "total_rooms": 1,
+    "facilities": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "hotel.roomtype",
+  "pk": 10,
+  "fields": {
+    "name": "Standard Room 7",
+    "location": "Lantai 1",
+    "category": "standard",
+    "price_per_night": "150000.00",
+    "capacity": 2,
+    "description": "Kamar istimewa sekali",
+    "image": "room_types/family_zfGNAKc.jpeg",
+    "total_rooms": 1,
+    "facilities": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  }
+},
+{
+  "model": "hotel.roomimage",
+  "pk": 1,
+  "fields": {
+    "room": 7,
+    "image": "room_gallery/family.jpeg"
+  }
+},
+{
+  "model": "hotel.roomimage",
+  "pk": 2,
+  "fields": {
+    "room": 7,
+    "image": "room_gallery/room1.jpeg"
+  }
+},
+{
+  "model": "hotel.roomimage",
+  "pk": 3,
+  "fields": {
+    "room": 7,
+    "image": "room_gallery/room2_8ITAud0.jpeg"
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 1,
+  "fields": {
+    "name": "Nasi Goreng",
+    "price": "20000.00",
+    "image": "resto_menus/download.jpg",
+    "description": "Nasi Goreng dengan telur dan sayuran",
+    "is_package": false,
+    "package_content": "",
+    "min_order_qty": 1,
+    "has_flavor_option": true
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 2,
+  "fields": {
+    "name": "Ayam Goreng",
+    "price": "20000.00",
+    "image": "resto_menus/download_1.jpg",
+    "description": "Nasi Ayam Goreng dengan sambal dan sayuran",
+    "is_package": false,
+    "package_content": "",
+    "min_order_qty": 1,
+    "has_flavor_option": false
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 3,
+  "fields": {
+    "name": "Paket 1",
+    "price": "30000.00",
+    "image": "resto_menus/catering.jpg",
+    "description": "",
+    "is_package": true,
+    "package_content": "Nasi Putih,Pecel Sayur,Telur Dadar/Ceplok,Mie Goreng,Tempe Tepung,Kerupuk,Buah,Teh",
+    "min_order_qty": 15,
+    "has_flavor_option": false
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 4,
+  "fields": {
+    "name": "Paket 2",
+    "price": "35000.00",
+    "image": "resto_menus/catering_t2m98Og.jpg",
+    "description": "",
+    "is_package": true,
+    "package_content": "Nasi Putih,Sup Bakso,Ayam Goreng,Tahu Goreng,Sambal,Kerupuk,Buah,Teh",
+    "min_order_qty": 15,
+    "has_flavor_option": false
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 5,
+  "fields": {
+    "name": "Paket 3",
+    "price": "40000.00",
+    "image": "resto_menus/catering_JIahi0D.jpg",
+    "description": "",
+    "is_package": true,
+    "package_content": "Nasi putih,Sayur lodeh,Lele / ayam goreng,Bihun goreng,Bakwan,Krupuk,Buah,Teh",
+    "min_order_qty": 15,
+    "has_flavor_option": false
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 6,
+  "fields": {
+    "name": "Mie Rebus",
+    "price": "15000.00",
+    "image": "resto_menus/mire.jpg",
+    "description": "Mie rebus dengan telur dan sayuran",
+    "is_package": false,
+    "package_content": "",
+    "min_order_qty": 1,
+    "has_flavor_option": true
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 7,
+  "fields": {
+    "name": "Mie Goreng",
+    "price": "15000.00",
+    "image": "resto_menus/migor.jpg",
+    "description": "Mie goreng dengan telur dan sayuran",
+    "is_package": false,
+    "package_content": "",
+    "min_order_qty": 1,
+    "has_flavor_option": true
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 8,
+  "fields": {
+    "name": "Paket 4",
+    "price": "40000.00",
+    "image": "resto_menus/catering_GHfdOYf.jpg",
+    "description": "",
+    "is_package": true,
+    "package_content": "Nasi putih,Soto Betawi,Bergedel,Kerupuk,Buah,Teh,Kopi",
+    "min_order_qty": 15,
+    "has_flavor_option": false
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 9,
+  "fields": {
+    "name": "Paket 5",
+    "price": "45000.00",
+    "image": "resto_menus/catering_Yr75cHI.jpg",
+    "description": "",
+    "is_package": true,
+    "package_content": "Nasi Putih,Ayam Bakar,Oseng Buncis Tahu,Mie Lethek,Tempe Goreng,Krupuk,Sambal,Buah,Teh,Kopi",
+    "min_order_qty": 15,
+    "has_flavor_option": false
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 10,
+  "fields": {
+    "name": "Paket 6",
+    "price": "50000.00",
+    "image": "resto_menus/catering_1Oo3HYU.jpg",
+    "description": "",
+    "is_package": true,
+    "package_content": "Nasi Putih,Nila Bakar,Ca Sayur Bakso,Mie Lethek,Tahu/Tempe Goreng,Krupuk,Sambal,Buah,Teh,Kopi",
+    "min_order_qty": 15,
+    "has_flavor_option": false
+  }
+},
+{
+  "model": "resto.menu",
+  "pk": 11,
+  "fields": {
+    "name": "Paket 7",
+    "price": "55000.00",
+    "image": "resto_menus/catering_ckIDSJt.jpg",
+    "description": "",
+    "is_package": true,
+    "package_content": "Nasi Putih,Sup Iga Sapi,Mie Goreng,Bergedel,Tempe Goreng,Krupuk,Buah,Sambel,Teh,Kopi",
+    "min_order_qty": 15,
+    "has_flavor_option": false
+  }
+},
+{
+  "model": "resto.drink",
+  "pk": 1,
+  "fields": {
+    "name": "Teh",
+    "price": "5000.00",
+    "image": "resto_drinks/Sweet_Tea.jpg",
+    "description": "Es Teh Segar",
+    "serving_type": "both",
+    "has_sugar_option": true
+  }
+},
+{
+  "model": "resto.drink",
+  "pk": 2,
+  "fields": {
+    "name": "Jeruk",
+    "price": "5000.00",
+    "image": "resto_drinks/jeruk.jpg",
+    "description": "Es Jeruk dengan jeruk pilihan",
+    "serving_type": "both",
+    "has_sugar_option": true
+  }
+},
+{
+  "model": "resto.drink",
+  "pk": 3,
+  "fields": {
+    "name": "Kopi Hitam",
+    "price": "5000.00",
+    "image": "resto_drinks/kopi.jpg",
+    "description": "Kopi Hitam Kapal Api",
+    "serving_type": "both",
+    "has_sugar_option": true
+  }
+},
+{
+  "model": "resto.drink",
+  "pk": 4,
+  "fields": {
+    "name": "Susu Putih",
+    "price": "5000.00",
+    "image": "resto_drinks/susuput.jpg",
+    "description": "Susu Putih Frisian Flag",
+    "serving_type": "both",
+    "has_sugar_option": false
+  }
+},
+{
+  "model": "resto.drink",
+  "pk": 5,
+  "fields": {
+    "name": "Susu Coklat",
+    "price": "5000.00",
+    "image": "resto_drinks/susuco.jpg",
+    "description": "Susu Coklat Frisian Flag",
+    "serving_type": "both",
+    "has_sugar_option": false
+  }
+},
+{
+  "model": "resto.drink",
+  "pk": 6,
+  "fields": {
+    "name": "Kopi GoodDay",
+    "price": "5000.00",
+    "image": "resto_drinks/goday.jpg",
+    "description": "Kopi GoodDay dingin maupun panas",
+    "serving_type": "both",
+    "has_sugar_option": false
+  }
+},
+{
+  "model": "vw.vwdestinasi",
+  "pk": 1,
+  "fields": {
+    "name": "Candi Borobudur",
+    "image": "vw_destinations/download_2.jpg",
+    "description": "Candi Mantap"
+  }
+},
+{
+  "model": "vw.vwdestinasi",
+  "pk": 2,
+  "fields": {
+    "name": "Svarga Bumi",
+    "image": "vw_destinations/svarga.jpg",
+    "description": "Menikmati keindahan persawahan"
+  }
+},
+{
+  "model": "vw.vwdestinasi",
+  "pk": 3,
+  "fields": {
+    "name": "Bukit Rhema",
+    "image": "vw_destinations/rhema.jpg",
+    "description": "Gereja berbentuk ayam dengan view keindahan alam"
+  }
+},
+{
+  "model": "vw.vwdestinasi",
+  "pk": 4,
+  "fields": {
+    "name": "Lap. Tuksongo",
+    "image": "vw_destinations/lapT.jpg",
+    "description": "Lapangan desa Tuksongo"
+  }
+},
+{
+  "model": "vw.vwdestinasi",
+  "pk": 5,
+  "fields": {
+    "name": "Watu Putih",
+    "image": "vw_destinations/watup.jpg",
+    "description": "Watu Putih Borobudur"
+  }
+},
+{
+  "model": "vw.vwdestinasi",
+  "pk": 6,
+  "fields": {
+    "name": "Taman Kelinci",
+    "image": "vw_destinations/tamank.jpg",
+    "description": "Taman kelinci"
+  }
+},
+{
+  "model": "vw.vwdestinasi",
+  "pk": 7,
+  "fields": {
+    "name": "Junk Yard",
+    "image": "vw_destinations/junky.jpg",
+    "description": "Junk Yard"
+  }
+},
+{
+  "model": "vw.vwdestinasi",
+  "pk": 8,
+  "fields": {
+    "name": "Persawahan Mandala",
+    "image": "vw_destinations/mandala.jpg",
+    "description": "Persawahan Mandala"
+  }
+},
+{
+  "model": "vw.vwedukasi",
+  "pk": 1,
+  "fields": {
+    "title": "Budidaya Lebah Madu",
+    "description": "Teknik ternak penghasil madu",
+    "image": "vw_education/madu.jpg"
+  }
+},
+{
+  "model": "vw.vwedukasi",
+  "pk": 2,
+  "fields": {
+    "title": "Budidaya Jamur",
+    "description": "Teknik Pembuatan Jamur",
+    "image": "vw_education/jamur.jpg"
+  }
+},
+{
+  "model": "vw.vwedukasi",
+  "pk": 3,
+  "fields": {
+    "title": "Perah Susu Kambing Etawa",
+    "description": "Proses pemerahan susu etawa",
+    "image": "vw_education/susuperah.jpg"
+  }
+},
+{
+  "model": "vw.vwedukasi",
+  "pk": 4,
+  "fields": {
+    "title": "Edukasi Gula Jawa",
+    "description": "Pembuatan gula tradisional",
+    "image": "vw_education/gulajawa.jpg"
+  }
+},
+{
+  "model": "vw.vwedukasi",
+  "pk": 5,
+  "fields": {
+    "title": "Edukasi Pati Aren",
+    "description": "Pengolahan pati alami",
+    "image": "vw_education/pati.jpg"
+  }
+},
+{
+  "model": "vw.vwedukasi",
+  "pk": 6,
+  "fields": {
+    "title": "Edukasi Rengginan",
+    "description": "Pembuatan camilan tradisional",
+    "image": "vw_education/rengginanag.jpg"
+  }
+},
+{
+  "model": "vw.vwedukasi",
+  "pk": 7,
+  "fields": {
+    "title": "Edukasi Tahu",
+    "description": "Proses produksi tahu",
+    "image": "vw_education/tahu.jpg"
+  }
+},
+{
+  "model": "vw.vwedukasi",
+  "pk": 8,
+  "fields": {
+    "title": "Gerabah",
+    "description": "Kerajinan tanah liat",
+    "image": "vw_education/gerabah.jpg"
+  }
+},
+{
+  "model": "vw.vwedukasi",
+  "pk": 9,
+  "fields": {
+    "title": "Membatik",
+    "description": "Seni batik tradisional",
+    "image": "vw_education/batik.jpg"
+  }
+},
+{
+  "model": "vw.vwpackage",
+  "pk": 1,
+  "fields": {
+    "name": "Short Trip",
+    "slug": "short",
+    "price": "400000",
+    "duration": "2 Jam",
+    "image": "vw_packages/vw1.png",
+    "description": "Durasi 2 jam - 1 Unit Vw Safari - 2 Kunjungan Edukasi - 1 Kunjungan Destinasi",
+    "destinations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "educations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+},
+{
+  "model": "vw.vwpackage",
+  "pk": 2,
+  "fields": {
+    "name": "Medium Trip",
+    "slug": "Medium",
+    "price": "550000",
+    "duration": "3 Jam",
+    "image": "vw_packages/vw2.png",
+    "description": "Durasi 3 jam - 1 Unit Vw Safari - 3 Kunjungan Edukasi - 1 Kunjungan Destinasi",
+    "destinations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "educations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+},
+{
+  "model": "vw.vwpackage",
+  "pk": 3,
+  "fields": {
+    "name": "Long Trip",
+    "slug": "Long",
+    "price": "700000",
+    "duration": "4 Jam",
+    "image": "vw_packages/vw3.png",
+    "description": "Durasi 4 jam - 1 Unit Vw Safari - Kunjungan Edukasi - Kunjungan Destinasi",
+    "destinations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "educations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+},
+{
+  "model": "vw.vwpackage",
+  "pk": 4,
+  "fields": {
+    "name": "Sunrise Trip",
+    "slug": "Sunrise",
+    "price": "650000",
+    "duration": "3 Jam",
+    "image": "vw_packages/vw4.png",
+    "description": "Durasi 3 jam - 1 Unit Vw Safari - 1 Kunjungan Sunrise - 2 Kunjungan Destinasi",
+    "destinations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "educations": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+},
+{
+  "model": "transactions.order",
+  "pk": 78,
+  "fields": {
+    "user": 3,
+    "created_at": "2026-01-14T08:21:16.118Z",
+    "status": "PAY_AT_HOTEL",
+    "total_amount_gateway": "115000.00",
+    "midtrans_id": null,
+    "has_vw_booking": false,
+    "vw_payment_status": "NONE",
+    "special_request": "Antar kamar ya",
+    "customer_name": "Alexayoanan",
+    "customer_phone": "08123456789",
+    "room_number": "7",
+    "payment_method": "hotel"
+  }
+},
+{
+  "model": "transactions.order",
+  "pk": 79,
+  "fields": {
+    "user": 2,
+    "created_at": "2026-01-14T18:54:04.736Z",
+    "status": "PENDING",
+    "total_amount_gateway": "240000.00",
+    "midtrans_id": "INV-79-1768416844",
+    "has_vw_booking": false,
+    "vw_payment_status": "NONE",
+    "special_request": "Kamar Bawah",
+    "customer_name": "BagusSanto",
+    "customer_phone": "",
+    "room_number": "",
+    "payment_method": "bca"
+  }
+},
+{
+  "model": "transactions.order",
+  "pk": 80,
+  "fields": {
+    "user": 2,
+    "created_at": "2026-01-14T18:54:39.949Z",
+    "status": "PAY_AT_HOTEL",
+    "total_amount_gateway": "550000.00",
+    "midtrans_id": null,
+    "has_vw_booking": false,
+    "vw_payment_status": "NONE",
+    "special_request": "",
+    "customer_name": "Agus",
+    "customer_phone": "",
+    "room_number": "",
+    "payment_method": "hotel"
+  }
+},
+{
+  "model": "transactions.order",
+  "pk": 81,
+  "fields": {
+    "user": 2,
+    "created_at": "2026-01-14T18:55:09.842Z",
+    "status": "CANCEL",
+    "total_amount_gateway": "45000.00",
+    "midtrans_id": null,
+    "has_vw_booking": false,
+    "vw_payment_status": "NONE",
+    "special_request": "",
+    "customer_name": "Santo",
+    "customer_phone": "08372832",
+    "room_number": "01",
+    "payment_method": "hotel"
+  }
+},
+{
+  "model": "transactions.orderitemhotel",
+  "pk": 82,
+  "fields": {
+    "order": 79,
+    "room_type": 1,
+    "check_in": "2026-01-14",
+    "check_out": "2026-01-15",
+    "price_at_booking": "200000.00"
+  }
+},
+{
+  "model": "transactions.orderitemhotel",
+  "pk": 83,
+  "fields": {
+    "order": 80,
+    "room_type": 1,
+    "check_in": "2026-01-14",
+    "check_out": "2026-01-15",
+    "price_at_booking": "200000.00"
+  }
+},
+{
+  "model": "transactions.orderitemhotel",
+  "pk": 84,
+  "fields": {
+    "order": 80,
+    "room_type": 2,
+    "check_in": "2026-01-14",
+    "check_out": "2026-01-15",
+    "price_at_booking": "350000.00"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 92,
+  "fields": {
+    "order": 78,
+    "menu": 6,
+    "drink": null,
+    "quantity": 2,
+    "price_at_booking": "30000.00",
+    "note": "Sedang"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 93,
+  "fields": {
+    "order": 78,
+    "menu": 1,
+    "drink": null,
+    "quantity": 1,
+    "price_at_booking": "20000.00",
+    "note": "Sedang"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 94,
+  "fields": {
+    "order": 78,
+    "menu": 2,
+    "drink": null,
+    "quantity": 1,
+    "price_at_booking": "20000.00",
+    "note": ""
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 95,
+  "fields": {
+    "order": 78,
+    "menu": 7,
+    "drink": null,
+    "quantity": 1,
+    "price_at_booking": "15000.00",
+    "note": "Sedang"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 96,
+  "fields": {
+    "order": 78,
+    "menu": null,
+    "drink": 1,
+    "quantity": 1,
+    "price_at_booking": "5000.00",
+    "note": "Ice"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 97,
+  "fields": {
+    "order": 78,
+    "menu": null,
+    "drink": 2,
+    "quantity": 1,
+    "price_at_booking": "5000.00",
+    "note": "Ice"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 98,
+  "fields": {
+    "order": 78,
+    "menu": null,
+    "drink": 3,
+    "quantity": 1,
+    "price_at_booking": "5000.00",
+    "note": "Ice"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 99,
+  "fields": {
+    "order": 78,
+    "menu": null,
+    "drink": 4,
+    "quantity": 1,
+    "price_at_booking": "5000.00",
+    "note": "Ice"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 100,
+  "fields": {
+    "order": 78,
+    "menu": null,
+    "drink": 5,
+    "quantity": 1,
+    "price_at_booking": "5000.00",
+    "note": "Ice"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 101,
+  "fields": {
+    "order": 78,
+    "menu": null,
+    "drink": 6,
+    "quantity": 1,
+    "price_at_booking": "5000.00",
+    "note": "Ice"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 102,
+  "fields": {
+    "order": 79,
+    "menu": 1,
+    "drink": null,
+    "quantity": 1,
+    "price_at_booking": "20000.00",
+    "note": "Sedang"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 103,
+  "fields": {
+    "order": 79,
+    "menu": 7,
+    "drink": null,
+    "quantity": 1,
+    "price_at_booking": "15000.00",
+    "note": "Sedang"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 104,
+  "fields": {
+    "order": 79,
+    "menu": null,
+    "drink": 1,
+    "quantity": 1,
+    "price_at_booking": "5000.00",
+    "note": "Ice, Less Sugar"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 105,
+  "fields": {
+    "order": 81,
+    "menu": 1,
+    "drink": null,
+    "quantity": 2,
+    "price_at_booking": "40000.00",
+    "note": "Sedang"
+  }
+},
+{
+  "model": "transactions.orderitemresto",
+  "pk": 106,
+  "fields": {
+    "order": 81,
+    "menu": null,
+    "drink": 1,
+    "quantity": 1,
+    "price_at_booking": "5000.00",
+    "note": "Ice"
+  }
+}
+]
