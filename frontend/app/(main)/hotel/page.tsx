@@ -378,11 +378,11 @@ function SearchContent() {
              <div className="text-6xl mb-4 opacity-20">❖</div>
              <p className="text-xl font-serif text-gray-400">Tidak ada kamar tersedia untuk pencarian ini.</p>
              <button onClick={() => {
-                setSearchParams({ checkIn: '', checkOut: '', guests: '' });
-                fetchRooms();
-                setSelectedFilter('all');
+               setSearchParams({ checkIn: '', checkOut: '', guests: '' });
+               fetchRooms();
+               setSelectedFilter('all');
              }} className="mt-4 text-xs uppercase tracking-widest border-b border-[#BFA06D] pb-1 hover:text-[#BFA06D]">
-                Reset Search
+               Reset Search
              </button>
           </div>
         ) : (
@@ -481,7 +481,7 @@ function SearchContent() {
       <AnimatePresence>
         {selectedRoom && (
           <motion.div
-            className="fixed inset-0 z-[60] flex items-center justify-center p-4 md:p-8"
+            className="fixed inset-0 z-[60] flex items-end md:items-center justify-center md:p-8"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
           >
             <div 
@@ -491,32 +491,32 @@ function SearchContent() {
             
             <motion.div
               layoutId={`room-${selectedRoom.id}`}
-              className="relative bg-[#FDFCF8] w-full max-w-6xl max-h-[90vh] md:max-h-[85vh] shadow-2xl overflow-hidden flex flex-col md:flex-row"
-              initial={{ scale: 0.95, opacity: 0 }} 
-              animate={{ scale: 1, opacity: 1 }} 
-              exit={{ scale: 0.95, opacity: 0 }}
+              className="relative bg-[#FDFCF8] w-full md:max-w-6xl h-full md:h-auto md:max-h-[85vh] shadow-2xl overflow-hidden flex flex-col md:flex-row md:rounded-3xl"
+              initial={{ y: "100%", opacity: 0 }} 
+              animate={{ y: 0, opacity: 1 }} 
+              exit={{ y: "100%", opacity: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
               <button
                 onClick={() => setSelectedRoom(null)}
-                className="absolute top-4 right-4 z-30 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white md:text-[#2D2D2D] md:bg-gray-100 md:hover:bg-gray-200 transition-all border border-white/20 md:border-transparent"
+                className="absolute top-4 right-4 z-50 w-10 h-10 bg-black/20 hover:bg-black/40 md:bg-gray-100 md:hover:bg-gray-200 backdrop-blur-md rounded-full flex items-center justify-center text-white md:text-[#2D2D2D] transition-all border border-white/20 md:border-transparent"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
               </button>
 
-              <div className="w-full md:w-[55%] h-[40vh] md:h-auto relative bg-gray-900 group">
+              <div className="w-full md:w-[55%] h-[35vh] md:h-auto relative bg-gray-900 group flex-shrink-0">
                 <AnimatePresence mode="wait">
                   {modalImages.length > 0 ? (
                     <motion.div 
                       key={currentSlide}
-                      initial={{ opacity: 0, scale: 1.05 }}
-                      animate={{ opacity: 1, scale: 1 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.5 }}
                       className="absolute inset-0 bg-cover bg-center"
                       style={{ backgroundImage: `url('${getImageUrl(modalImages[currentSlide])}')` }}
                     >
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
                     </motion.div>
                   ) : (
                     <div className="flex items-center justify-center h-full text-white/50">No Image</div>
@@ -525,16 +525,16 @@ function SearchContent() {
 
                 {modalImages.length > 1 && (
                   <>
-                    <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <button onClick={prevSlide} className="w-12 h-12 rounded-full border border-white/30 bg-black/20 backdrop-blur hover:bg-white hover:text-black text-white flex items-center justify-center transition-all">❮</button>
-                      <button onClick={nextSlide} className="w-12 h-12 rounded-full border border-white/30 bg-black/20 backdrop-blur hover:bg-white hover:text-black text-white flex items-center justify-center transition-all">❯</button>
+                    <div className="absolute inset-0 flex items-center justify-between px-4 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                      <button onClick={prevSlide} className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/30 bg-black/20 backdrop-blur hover:bg-white hover:text-black text-white flex items-center justify-center transition-all pointer-events-auto">❮</button>
+                      <button onClick={nextSlide} className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/30 bg-black/20 backdrop-blur hover:bg-white hover:text-black text-white flex items-center justify-center transition-all pointer-events-auto">❯</button>
                     </div>
-                    <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3">
+                    <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 md:gap-3 pointer-events-none">
                       {modalImages.map((_, idx) => (
                         <button 
                           key={idx} 
                           onClick={() => setCurrentSlide(idx)}
-                          className={`h-1 transition-all duration-300 rounded-full shadow-sm ${currentSlide === idx ? 'w-8 bg-white' : 'w-2 bg-white/40 hover:bg-white/80'}`} 
+                          className={`h-1 transition-all duration-300 rounded-full shadow-sm pointer-events-auto ${currentSlide === idx ? 'w-6 md:w-8 bg-white' : 'w-2 bg-white/40 hover:bg-white/80'}`} 
                         />
                       ))}
                     </div>
@@ -542,44 +542,45 @@ function SearchContent() {
                 )}
               </div>
 
-              <div className="w-full md:w-[45%] flex flex-col bg-[#FDFCF8]">
-                <div className="p-8 md:p-12 overflow-y-auto custom-scrollbar flex-grow">
-                  <div className="mb-8">
-                    <span className="text-[#BFA06D] font-bold uppercase tracking-[0.2em] text-xs mb-2 block">
+              <div className="w-full md:w-[45%] flex flex-col bg-[#FDFCF8] flex-1 min-h-0 relative">
+                
+                <div className="p-5 md:p-12 overflow-y-auto custom-scrollbar flex-grow">
+                  <div className="mb-4 md:mb-8">
+                    <span className="text-[#BFA06D] font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs mb-2 block">
                       {selectedRoom.category} Collection
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-serif text-[#2D2D2D] leading-tight">
+                    <h2 className="text-2xl md:text-4xl font-serif text-[#2D2D2D] leading-tight">
                       {selectedRoom.name}
                     </h2>
                   </div>
 
-                  <div className="flex items-end gap-1 mb-8 pb-8 border-b border-gray-100">
-                    <span className="text-3xl font-light text-[#2D2D2D]">
+                  <div className="flex items-end gap-1 mb-6 md:mb-8 pb-6 md:pb-8 border-b border-gray-100">
+                    <span className="text-2xl md:text-3xl font-light text-[#2D2D2D]">
                       IDR {Number(selectedRoom.price).toLocaleString('id-ID')}
                     </span>
-                    <span className="text-sm text-gray-400 mb-1.5 font-light">/ malam</span>
+                    <span className="text-xs md:text-sm text-gray-400 mb-1.5 font-light">/ malam</span>
                   </div>
 
-                  <div className="space-y-8">
+                  <div className="space-y-6 md:space-y-8 pb-4">
                     <div>
-                      <h4 className="text-xs font-bold uppercase tracking-widest text-[#2D2D2D] mb-4 flex items-center gap-2">
+                      <h4 className="text-xs font-bold uppercase tracking-widest text-[#2D2D2D] mb-3 md:mb-4 flex items-center gap-2">
                         <span className="w-4 h-[1px] bg-[#BFA06D]"></span> About This Room
                       </h4>
-                      <p className="text-gray-500 leading-7 font-light text-justify">
+                      <p className="text-sm md:text-base text-gray-500 leading-relaxed font-light text-justify">
                         {selectedRoom.description || "Nikmati waktu istirahat yang berkualitas dengan suasana tenang dan fasilitas yang memadai. Ruangan ini dirancang untuk memberikan kenyamanan maksimal bagi Anda dan keluarga."}
                       </p>
                     </div>
 
                     {selectedRoom.facilities && selectedRoom.facilities.length > 0 && (
                       <div>
-                        <h4 className="text-xs font-bold uppercase tracking-widest text-[#2D2D2D] mb-4 flex items-center gap-2">
+                        <h4 className="text-xs font-bold uppercase tracking-widest text-[#2D2D2D] mb-3 md:mb-4 flex items-center gap-2">
                           <span className="w-4 h-[1px] bg-[#BFA06D]"></span> Amenities
                         </h4>
-                        <div className="grid grid-cols-2 gap-y-3 gap-x-4">
+                        <div className="grid grid-cols-2 gap-y-2 gap-x-4">
                           {selectedRoom.facilities.map((facility) => (
-                            <div key={facility.id} className="flex items-center gap-3 text-sm text-gray-600 font-light">
-                              <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#FAF9F6] border border-[#BFA06D]/30 flex items-center justify-center text-[#BFA06D]">
-                                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div key={facility.id} className="flex items-center gap-2 text-xs md:text-sm text-gray-600 font-light">
+                              <span className="flex-shrink-0 w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#FAF9F6] border border-[#BFA06D]/30 flex items-center justify-center text-[#BFA06D]">
+                                <svg className="w-2.5 h-2.5 md:w-3 md:h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                 </svg>
                               </span>
@@ -590,44 +591,40 @@ function SearchContent() {
                       </div>
                     )}
 
-                    <div className="bg-[#FAF9F6] p-6 rounded-xl border border-gray-100/50">
+                    <div className="bg-[#FAF9F6] p-4 md:p-6 rounded-xl border border-gray-100/50">
                         <h4 className="text-xs font-bold uppercase tracking-widest text-[#2D2D2D] mb-4">Room Details</h4>
                         <div className="flex items-center gap-4 text-gray-600">
-                          <div className="flex flex-col items-center justify-center w-12 h-12 bg-white rounded shadow-sm border border-gray-100">
-                             <svg className="w-5 h-5 text-[#BFA06D]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                          <div className="flex flex-col items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-white rounded shadow-sm border border-gray-100">
+                             <svg className="w-4 h-4 md:w-5 md:h-5 text-[#BFA06D]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                           </div>
                           <div className="flex flex-col">
-                             <span className="text-sm font-bold text-[#2D2D2D]">{selectedRoom.capacity} Adults</span>
-                             <span className="text-xs text-gray-400">Capacity</span>
+                             <span className="text-xs md:text-sm font-bold text-[#2D2D2D]">{selectedRoom.capacity} Adults</span>
+                             <span className="text-[10px] md:text-xs text-gray-400">Capacity</span>
                           </div>
                           
                           <div className="w-[1px] h-8 bg-gray-200 mx-2"></div>
 
-                          <div className="flex flex-col items-center justify-center w-12 h-12 bg-white rounded shadow-sm border border-gray-100">
-                            <svg className="w-5 h-5 text-[#BFA06D]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                          <div className="flex flex-col items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-white rounded shadow-sm border border-gray-100">
+                            <svg className="w-4 h-4 md:w-5 md:h-5 text-[#BFA06D]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                           </div>
                           <div className="flex flex-col">
-                             <span className="text-sm font-bold text-[#2D2D2D]">
+                             <span className="text-xs md:text-sm font-bold text-[#2D2D2D]">
                                {selectedRoom.category === 'family' ? '2 Children' : '1 Child'}
                              </span>
-                             <span className="text-xs text-gray-400">Included</span>
+                             <span className="text-[10px] md:text-xs text-gray-400">Included</span>
                           </div>
                         </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6 md:p-8 bg-white border-t border-gray-100 z-10 flex gap-4">
+                <div className="p-4 md:p-8 bg-white border-t border-gray-100 z-10 flex gap-4 flex-shrink-0 shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
                   <button 
                     disabled={isRoomInCart(selectedRoom.id)}
                     onClick={() => {
                       if (!isAuthenticated) {
                         toast.error("Silakan login terlebih dahulu untuk melakukan pemesanan.", {
-                            style: {
-                                background: '#2D2D2D',
-                                color: '#fff',
-                                border: '1px solid #BFA06D'
-                            }
+                            style: { background: '#2D2D2D', color: '#fff', border: '1px solid #BFA06D' }
                         });
                         openAuthModal(); 
                         return;
@@ -661,7 +658,7 @@ function SearchContent() {
                       triggerToast(`${selectedRoom.name} added to booking!`);
                       setSelectedRoom(null);
                     }}
-                    className={`w-full py-4 text-sm font-bold uppercase tracking-[0.15em] transition-all duration-300 shadow-xl ${
+                    className={`w-full py-3.5 md:py-4 text-xs md:text-sm font-bold uppercase tracking-[0.15em] transition-all duration-300 shadow-xl rounded-lg ${
                         isRoomInCart(selectedRoom.id)
                         ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                         : 'bg-[#2D2D2D] text-white hover:bg-[#BFA06D] hover:shadow-[#BFA06D]/20'

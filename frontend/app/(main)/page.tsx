@@ -302,16 +302,16 @@ export default function Home() {
 };
 
   return (
-    <div className="homepage-container w-full bg-[#FAF9F6] relative">
+  <div className="homepage-container w-full bg-[#FAF9F6] relative overflow-x-hidden">
 
       {/* SECTION MAIN BANNER */}
-      <section className="relative h-screen flex items-center overflow-hidden pt-0">
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-24 md:pt-32">
         <div className="absolute inset-0 top-0 z-0">
           <div className="w-full h-full bg-cover bg-center bg-[url('/hero-bg.jpg')] transform scale-105" /> 
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
         </div>
         
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center mt-16">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center mt-4 md:mt-0">
           <div className="md:col-span-6">
             <h1 className="text-white text-6xl md:text-8xl font-serif font-bold leading-[1.1] mb-6 drop-shadow-2xl">
               Your<br />Perfect Escape.
@@ -324,7 +324,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="col-span-1 md:col-span-6 mt-10 md:mt-0 flex justify-center md:justify-end">
+          <div className="col-span-1 md:col-span-6 mt-4 md:mt-0 flex justify-center md:justify-end">
             <div className="relative w-full max-w-[350px] md:max-w-[420px]">
               <div className="bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 shadow-2xl relative h-[280px] md:h-[320px]">
                 
@@ -376,7 +376,7 @@ export default function Home() {
 
       {/* BOOKING FORM */}
       <motion.div 
-        className="relative z-30 -mt-10"
+        className="relative z-30 mt-6 md:-mt-10 px-4 md:px-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -1011,7 +1011,7 @@ export default function Home() {
       </section>
 
       {/* SECTION REVIEW */}
-      <section className="relative py-24 px-6 bg-black">
+      <section className="relative py-24 px-6 bg-black overflow-x-hidden">
         <div className="absolute inset-0 z-0">
            <div className="absolute inset-0 bg-[url('/review.jpg')] bg-cover bg-center opacity-60" />
            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
