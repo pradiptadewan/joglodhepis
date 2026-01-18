@@ -8,6 +8,7 @@ import { useResto } from '@/context/RestoContext';
 import Script from 'next/script';
 
 import { API_URL, MIDTRANS_CLIENT_KEY } from '@/lib/config';
+import { toast, Toaster } from 'react-hot-toast';
 
 declare global {
   interface Window {
@@ -51,23 +52,42 @@ interface FoodOrderItem {
 const ConfirmModal = ({ isOpen, onClose, onConfirm, isProcessing }: any) => {
   if (!isOpen) return null;
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onClick={onClose} />
       <motion.div 
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        className="relative bg-white rounded-2xl shadow-2xl p-6 max-w-sm w-full text-center"
+        initial={{ scale: 0.95, opacity: 0, y: 20 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.95, opacity: 0, y: 20 }}
+        className="relative bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full text-center border border-gray-100"
       >
-        <h3 className="text-xl font-serif font-bold text-[#2D2D2D] mb-2">Konfirmasi Pesanan</h3>
-        <p className="text-gray-600 mb-6 text-sm">
-          Lakukan pembayaran di hotel?
+        <div className="w-16 h-16 bg-[#BFA06D]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg className="w-8 h-8 text-[#BFA06D]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </div>
+        <h3 className="text-2xl font-serif font-bold text-[#2D2D2D] mb-3">Konfirmasi Pesanan</h3>
+        <p className="text-gray-500 mb-8 text-sm leading-relaxed">
+          Anda memilih metode <strong>Pay at Hotel</strong>. Pastikan Anda melakukan konfirmasi via WhatsApp setelah ini. Lanjutkan?
         </p>
-        <div className="flex gap-3">
-          <button onClick={onClose} disabled={isProcessing} className="flex-1 py-2.5 rounded-lg border border-gray-200 text-gray-600 font-bold text-sm hover:bg-gray-50">
-            Batal
+        <div className="flex flex-col gap-3">
+          <button 
+            onClick={onConfirm} 
+            disabled={isProcessing} 
+            className="w-full py-3.5 rounded-xl bg-[#BFA06D] text-white font-bold text-sm hover:bg-[#a68b5d] transition-all shadow-lg hover:shadow-[#BFA06D]/30 flex justify-center items-center gap-2 disabled:opacity-70"
+          >
+              {isProcessing ? (
+                <>
+                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"/>
+                    Processing...
+                </>
+              ) : 'Ya, Pesan Sekarang'}
           </button>
-          <button onClick={onConfirm} disabled={isProcessing} className="flex-1 py-2.5 rounded-lg bg-[#BFA06D] text-white font-bold text-sm hover:bg-[#a68b5d] flex justify-center items-center">
-             {isProcessing ? 'Processing...' : 'Yes, Book Now'}
+          <button 
+            onClick={onClose} 
+            disabled={isProcessing} 
+            className="w-full py-3.5 rounded-xl border border-gray-200 text-gray-500 font-bold text-sm hover:bg-gray-50 transition-colors"
+          >
+            Batal
           </button>
         </div>
       </motion.div>
@@ -135,9 +155,13 @@ function PaymentContent() {
   useEffect(() => {
     const storedToken = localStorage.getItem('accessToken');
     if (!storedToken) {
-      alert("Silakan login terlebih dahulu untuk melanjutkan pembayaran.");
-      router.push('/auth/login');
-      return;
+      toast.error("Silakan login terlebih dahulu untuk melanjutkan pembayaran.", {
+        style: { background: '#2D2D2D', color: '#fff', border: '1px solid #BFA06D' }
+      });
+      const timer = setTimeout(() => {
+        router.push('/auth/login');
+      }, 1500);
+      return () => clearTimeout(timer);
     }
 
     setToken(storedToken);
@@ -189,6 +213,9 @@ function PaymentContent() {
     const finalNote = noteParts.join(', ');
     addToFoodCart(selectedItem, finalNote);
     setSelectedItem(null);
+    toast.success(`${selectedItem.name} ditambahkan`, {
+        style: { background: '#2D2D2D', color: '#fff' }
+    });
   };
 
   const addToFoodCart = (item: SelectedItem, note: string) => {
@@ -244,13 +271,17 @@ function PaymentContent() {
 
   const handlePaymentButtonClick = () => {
     if (grandTotal < 1) {
-        alert("Total pembayaran tidak boleh 0!");
+        toast.error("Total pembayaran tidak boleh 0!", {
+            style: { background: '#2D2D2D', color: '#fff', border: '1px solid #ef4444' }
+        });
         return;
     }
 
     if (!token) {
-        alert("Sesi Anda habis. Silakan login kembali.");
-        router.push('/auth/login');
+        toast.error("Sesi Anda habis. Silakan login kembali.", {
+            style: { background: '#2D2D2D', color: '#fff', border: '1px solid #BFA06D' }
+        });
+        setTimeout(() => router.push('/auth/login'), 1500);
         return;
     }
 
@@ -341,7 +372,9 @@ function PaymentContent() {
 
     } catch (error: any) {
         console.error("Transaction Error:", error);
-        alert(error.message || "Terjadi kesalahan saat memproses pesanan.");
+        toast.error(error.message || "Terjadi kesalahan saat memproses pesanan.", {
+            style: { background: '#2D2D2D', color: '#fff' }
+        });
         setShowConfirmModal(false);
     } finally {
         setIsProcessingPayment(false);
@@ -371,6 +404,8 @@ function PaymentContent() {
         data-client-key={MIDTRANS_CLIENT_KEY}
         strategy="lazyOnload"
       />
+
+      <Toaster position="top-center" reverseOrder={false} />
 
       <div className="min-h-screen bg-[#FDFCF8] text-[#2D2D2D] font-sans pt-28 pb-12 px-4 md:px-8 relative">
         <ConfirmModal 
@@ -618,26 +653,26 @@ function PaymentContent() {
                         
                           {selectedItem.type === 'drink' && (
                              <div className="bg-[#FAF9F6] p-5 rounded-lg border border-gray-100">
-                                 {selectedItem.serving_type === 'both' && (
-                                     <div className="mb-4">
-                                         <h4 className="text-xs font-bold text-[#2D2D2D] mb-3 uppercase tracking-wider">Temperature :</h4>
-                                         <div className="flex gap-2">
-                                             <button onClick={() => setTempSelection('Ice')} className={`px-4 py-2 rounded text-xs font-bold transition flex-1 border ${tempSelection === 'Ice' ? 'bg-[#BFA06D] text-white border-[#BFA06D]' : 'bg-white text-gray-500 border-gray-200 hover:border-[#BFA06D]'}`}>ICE</button>
-                                             <button onClick={() => setTempSelection('Hot')} className={`px-4 py-2 rounded text-xs font-bold transition flex-1 border ${tempSelection === 'Hot' ? 'bg-[#BFA06D] text-white border-[#BFA06D]' : 'bg-white text-gray-500 border-gray-200 hover:border-[#BFA06D]'}`}>HOT</button>
+                                     {selectedItem.serving_type === 'both' && (
+                                         <div className="mb-4">
+                                             <h4 className="text-xs font-bold text-[#2D2D2D] mb-3 uppercase tracking-wider">Temperature :</h4>
+                                             <div className="flex gap-2">
+                                                 <button onClick={() => setTempSelection('Ice')} className={`px-4 py-2 rounded text-xs font-bold transition flex-1 border ${tempSelection === 'Ice' ? 'bg-[#BFA06D] text-white border-[#BFA06D]' : 'bg-white text-gray-500 border-gray-200 hover:border-[#BFA06D]'}`}>ICE</button>
+                                                 <button onClick={() => setTempSelection('Hot')} className={`px-4 py-2 rounded text-xs font-bold transition flex-1 border ${tempSelection === 'Hot' ? 'bg-[#BFA06D] text-white border-[#BFA06D]' : 'bg-white text-gray-500 border-gray-200 hover:border-[#BFA06D]'}`}>HOT</button>
+                                             </div>
                                          </div>
-                                     </div>
-                                 )}
+                                     )}
 
-                                 {selectedItem.has_sugar_option && (
-                                     <div>
-                                         <h4 className="text-xs font-bold text-[#2D2D2D] mb-3 uppercase tracking-wider">Sugar Level :</h4>
-                                         <div className="flex flex-wrap gap-2">
-                                             {['Normal', 'Less Sugar', 'No Sugar'].map((level) => (
-                                                 <button key={level} onClick={() => setSugarLevel(level)} className={`px-4 py-2 rounded text-xs font-bold transition border ${sugarLevel === level ? 'bg-[#BFA06D] text-white border-[#BFA06D]' : 'bg-white text-gray-500 border-gray-200 hover:border-[#BFA06D]'}`}>{level}</button>
-                                             ))}
+                                     {selectedItem.has_sugar_option && (
+                                         <div>
+                                             <h4 className="text-xs font-bold text-[#2D2D2D] mb-3 uppercase tracking-wider">Sugar Level :</h4>
+                                             <div className="flex flex-wrap gap-2">
+                                                 {['Normal', 'Less Sugar', 'No Sugar'].map((level) => (
+                                                     <button key={level} onClick={() => setSugarLevel(level)} className={`px-4 py-2 rounded text-xs font-bold transition border ${sugarLevel === level ? 'bg-[#BFA06D] text-white border-[#BFA06D]' : 'bg-white text-gray-500 border-gray-200 hover:border-[#BFA06D]'}`}>{level}</button>
+                                                 ))}
+                                             </div>
                                          </div>
-                                     </div>
-                                 )}
+                                     )}
                              </div>
                           )}
 
@@ -673,10 +708,10 @@ function PaymentContent() {
                                 {selectedItem.type === 'drink' && (
                                     <>
                                             <span className="bg-white/20 px-2 py-0.5 rounded">
-                                                {selectedItem.serving_type === 'both' ? tempSelection : 
-                                                selectedItem.serving_type === 'hot_only' ? 'HOT' : 'ICE'}
+                                                {(selectedItem as Drink).serving_type === 'both' ? tempSelection : 
+                                                (selectedItem as Drink).serving_type === 'hot_only' ? 'HOT' : 'ICE'}
                                             </span>
-                                            {selectedItem.has_sugar_option && sugarLevel !== 'Normal' && (
+                                            {(selectedItem as Drink).has_sugar_option && sugarLevel !== 'Normal' && (
                                                 <span className="bg-white/20 px-2 py-0.5 rounded">{sugarLevel}</span>
                                             )}
                                     </>

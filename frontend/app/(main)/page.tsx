@@ -523,14 +523,16 @@ export default function Home() {
         <div className="mt-8 md:mt-10">
           <div className="max-w-5xl mx-auto px-5 md:px-8">
             <div className="relative overflow-hidden rounded-3xl border border-white/8 bg-black/40 shadow-[0_24px_70px_rgba(0,0,0,0.75)]">
-              <div className="absolute left-4 top-4 z-20 inline-flex items-center gap-2 rounded-full bg-black/55 px-3 py-1.5 backdrop-blur-md">
+              
+              {/* BADGE ATAS (Hanya Muncul di Tablet/Desktop) */}
+              <div className="absolute left-4 top-4 z-20 hidden md:inline-flex items-center gap-2 rounded-full bg-black/55 px-3 py-1.5 backdrop-blur-md">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-gray-100/80">
                   Homestay Preview
                 </span>
               </div>
 
-              <div className="relative w-full aspect-[9/16] sm:aspect-video lg:h-[420px] group">
+              <div className="relative w-full aspect-video lg:h-[420px] group">
                 <video
                   ref={videoRef}
                   className="absolute inset-0 h-full w-full object-cover"
@@ -547,23 +549,26 @@ export default function Home() {
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 text-center">
                   <button
                     onClick={togglePlay}
-                    className="flex h-16 w-16 items-center justify-center rounded-full bg-white/18 backdrop-blur-xl border border-white/40 shadow-[0_18px_55px_rgba(0,0,0,0.8)] hover:scale-105 hover:bg-white/25 transition-transform duration-300 md:h-18 md:w-18"
+                    // Responsive size: h-12 w-12 (Mobile) -> md:h-16 md:w-16 (Desktop)
+                    className={`flex h-12 w-12 md:h-16 md:w-16 items-center justify-center rounded-full bg-white/18 backdrop-blur-xl border border-white/40 shadow-[0_18px_55px_rgba(0,0,0,0.8)] hover:scale-105 hover:bg-white/25 transition-all duration-300 ${isPlaying ? 'opacity-30 hover:opacity-100' : 'opacity-100'}`}
                   >
                     {isPlaying ? (
                       <div className="flex gap-1.5">
-                        <div className="h-7 w-1.5 rounded-full bg-white shadow-lg" />
-                        <div className="h-7 w-1.5 rounded-full bg-white shadow-lg" />
+                        <div className="h-5 md:h-7 w-1 md:w-1.5 rounded-full bg-white shadow-lg" />
+                        <div className="h-5 md:h-7 w-1 md:w-1.5 rounded-full bg-white shadow-lg" />
                       </div>
                     ) : (
-                      <div className="ml-1 w-0 h-0 border-l-[18px] border-l-white border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent drop-shadow-xl" />
+                      <div className="ml-1 w-0 h-0 border-l-[14px] md:border-l-[18px] border-l-white border-t-[9px] md:border-t-[12px] border-t-transparent border-b-[9px] md:border-b-[12px] border-b-transparent drop-shadow-xl" />
                     )}
                   </button>
 
                   <div className="space-y-1 max-w-sm">
-                    <p className="text-[11px] tracking-[0.22em] uppercase text-gray-200/85">
+                    <p className={`text-[10px] tracking-[0.22em] uppercase text-gray-200/85 transition-opacity duration-300 ${isPlaying ? 'opacity-0 md:opacity-100' : 'opacity-100'}`}>
                       {isPlaying ? "Now Playing" : "Tap to Play"}
                     </p>
-                    <p className="text-sm md:text-base text-gray-100/90">
+                    
+                    {/* DESKRIPSI TEKS (Hanya Muncul di Tablet/Desktop) */}
+                    <p className="hidden md:block text-sm md:text-base text-gray-100/90 transition-opacity duration-300">
                       {isPlaying
                         ? "Nikmati tur singkat ke dalam Joglo Dhepis."
                         : "Sentuh tombol untuk melihat suasana villa secara langsung."}
@@ -571,7 +576,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center">
+                {/* BADGE BAWAH (Hanya Muncul di Tablet/Desktop) */}
+                <div className="pointer-events-none absolute inset-x-0 bottom-4 justify-center hidden md:flex">
                   <div className="inline-flex items-center gap-2 rounded-full bg-black/55 px-4 py-1.5 text-[10px] md:text-xs font-medium text-gray-100 backdrop-blur-md border border-white/15">
                     <span
                       className={`h-1.5 w-1.5 rounded-full ${
@@ -590,9 +596,9 @@ export default function Home() {
                   Siap pesan? Lanjutkan ke halaman booking kapan saja setelah menonton.
                 </p>
                 <Link href="/hotel">
-                <button className="inline-flex items-center justify-center rounded-full bg-[#BFA06D] px-4 py-2 text-[10px] md:text-xs font-semibold tracking-[0.18em] uppercase text-black/90 hover:bg-[#cfb27e] transition-colors">
-                  Book Now
-                </button>
+                  <button className="inline-flex items-center justify-center rounded-full bg-[#BFA06D] px-4 py-2 text-[10px] md:text-xs font-semibold tracking-[0.18em] uppercase text-black/90 hover:bg-[#cfb27e] transition-colors">
+                    Book Now
+                  </button>
                 </Link>
               </div>
             </div>
