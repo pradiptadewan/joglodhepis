@@ -1,13 +1,15 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect, use } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useResto } from '@/context/RestoContext';
+import { useAuth } from '@/context/AuthContext';
 
 export default function RestoCheckoutPage() {
   const router = useRouter();
+  const { user } = useAuth();
   const { cart, removeFromCart, updateQty, totalAmount } = useResto();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -17,6 +19,15 @@ export default function RestoCheckoutPage() {
     roomNumber: '',
     note: ''
   });
+
+  useEffect(() => {
+    if (user) {
+      setFormData((prev) => ({
+        ...prev,
+        fullName: user.name || '',
+      }));
+    }
+  }, [user]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

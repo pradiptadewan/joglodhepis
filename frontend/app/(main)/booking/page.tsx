@@ -1,14 +1,16 @@
 "use client";
 
-import { useState, Suspense } from 'react';
+import { useState, Suspense, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useBooking } from '@/context/BookingContext';
+import { useAuth } from '@/context/AuthContext';
 
 function BookingContent() {
   const router = useRouter();
   const { cart, removeFromCart } = useBooking(); 
+  const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -17,6 +19,16 @@ function BookingContent() {
     phone: '',
     specialRequest: ''
   });
+
+  useEffect(() => {
+    if (user) {
+      setFormData(prev => ({
+        ...prev,
+        fullName: user.name || '',
+        email: user.email || ''
+      }));
+    }
+  }, [user]);
 
   const grandTotal = cart.reduce((total, item) => total + (item.price * item.nights), 0);
 

@@ -323,9 +323,9 @@ function SearchContent() {
                 key={filterId}
                 onClick={() => setSelectedFilter(filterId)}
                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 relative group overflow-hidden ${
-                  selectedFilter === filterId
+                selectedFilter === filterId
                     ? 'text-white shadow-lg shadow-[#2D2D2D]/20'
-                    : 'text-gray-500 hover:text-[#2D2D2D] hover:bg-gray-100'
+                    : 'text-[#2D2D2D] bg-[#BFA06D]/25 hover:bg-[#BFA06D]/40' 
                 }`}
               >
                 {selectedFilter === filterId && (
@@ -481,7 +481,7 @@ function SearchContent() {
       <AnimatePresence>
         {selectedRoom && (
           <motion.div
-            className="fixed inset-0 z-[60] flex items-end md:items-center justify-center md:p-8"
+            className="fixed inset-0 z-[100] flex items-end md:items-center justify-center md:p-8"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
           >
             <div 

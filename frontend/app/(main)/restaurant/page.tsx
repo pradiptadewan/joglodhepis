@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useResto, RestoCartItem } from '@/context/RestoContext';
+import { useAuth } from '@/context/AuthContext';
 import toast, { Toaster } from 'react-hot-toast';
 
 const WA_NUMBER = "6285801262682";
@@ -61,6 +62,7 @@ const scaleIn: Variants = {
 export default function RestaurantPage() {
   const router = useRouter();
   const { addToCart, cart } = useResto();
+  const {isAuthenticated, openAuthModal} = useAuth();
 
   const [menus, setMenus] = useState<Menu[]>([]);
   const [drinks, setDrinks] = useState<Drink[]>([]);
@@ -128,6 +130,17 @@ export default function RestaurantPage() {
   };
 
   const handleAddToCart = () => {
+    if (!isAuthenticated) {
+      toast.error("Silakan login terlebih dahulu untuk memesan.", {
+          style: { 
+            background: '#2D2D2D', 
+            color: '#fff', 
+            border: '1px solid #BFA06D' 
+          }
+      });
+      openAuthModal();
+      return;
+    }
     if (!selectedItem) return;
 
     let noteParts: string[] = [];
@@ -339,8 +352,16 @@ export default function RestaurantPage() {
             className="text-center mb-16"
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
           >
-            <span className="text-[#BFA06D] uppercase tracking-[0.2em] text-xs font-bold">Special Events</span>
-            <h2 className="text-4xl md:text-5xl font-serif text-white mt-3">Menu Paket</h2>
+            <span className="text-[#BFA06D] uppercase tracking-[0.2em] text-xs font-bold block mb-3">
+              Special Events
+            </span>
+            <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
+              Menu Paket
+            </h2>
+            <div className="w-24 h-[1px] bg-[#BFA06D]/50 mx-auto mb-6"></div>
+            <p className="text-white/70 font-light text-sm tracking-wider italic">
+              *Minimum Order 15 Pax
+            </p>
           </motion.div>
 
           {!loading && (
@@ -385,7 +406,7 @@ export default function RestaurantPage() {
       <AnimatePresence>
         {selectedItem && (
           <motion.div
-            className="fixed inset-0 z-[60] flex items-center justify-center px-4"
+            className="fixed inset-0 z-[100] flex items-center justify-center px-4"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
           >
             <div className="absolute inset-0 bg-[#1a1a1a]/90 backdrop-blur-sm transition-opacity" onClick={() => setSelectedItem(null)} />

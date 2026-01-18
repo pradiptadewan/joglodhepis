@@ -305,13 +305,13 @@ export default function Home() {
   <div className="homepage-container w-full bg-[#FAF9F6] relative overflow-x-hidden">
 
       {/* SECTION MAIN BANNER */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-24 md:pt-32">
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-24 md:pt-32 pb-12 md:pb-0">
         <div className="absolute inset-0 top-0 z-0">
           <div className="w-full h-full bg-cover bg-center bg-[url('/hero-bg.jpg')] transform scale-105" /> 
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
         </div>
         
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center mt-4 md:mt-0">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-center mt-0 md:mt-0">
           <div className="md:col-span-6">
             <h1 className="text-white text-6xl md:text-8xl font-serif font-bold leading-[1.1] mb-6 drop-shadow-2xl">
               Your<br />Perfect Escape.
@@ -325,7 +325,7 @@ export default function Home() {
           </div>
 
           <div className="col-span-1 md:col-span-6 mt-4 md:mt-0 flex justify-center md:justify-end">
-            <div className="relative w-full max-w-[350px] md:max-w-[420px]">
+            <div className="relative w-full max-w-[320px] md:max-w-[420px]">
               <div className="bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden border border-white/20 shadow-2xl relative h-[280px] md:h-[320px]">
                 
                 {slides.map((slide, index) => (
@@ -505,7 +505,6 @@ export default function Home() {
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeInUp}
       >
-        {/* Teks Atas Sederhana */}
         <div className="max-w-5xl mx-auto px-5 md:px-8">
           <div className="space-y-3 text-center md:text-left">
             <p className="text-[10px] tracking-[0.35em] text-[#BFA06D]/80 uppercase">
@@ -521,11 +520,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* VIDEO CARD */}
         <div className="mt-8 md:mt-10">
           <div className="max-w-5xl mx-auto px-5 md:px-8">
             <div className="relative overflow-hidden rounded-3xl border border-white/8 bg-black/40 shadow-[0_24px_70px_rgba(0,0,0,0.75)]">
-              {/* Badge Kecil */}
               <div className="absolute left-4 top-4 z-20 inline-flex items-center gap-2 rounded-full bg-black/55 px-3 py-1.5 backdrop-blur-md">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-gray-100/80">
@@ -533,7 +530,6 @@ export default function Home() {
                 </span>
               </div>
 
-              {/* Container Video */}
               <div className="relative w-full aspect-[9/16] sm:aspect-video lg:h-[420px] group">
                 <video
                   ref={videoRef}
@@ -546,10 +542,8 @@ export default function Home() {
                   <source src="/videos/video.mp4" type="video/mp4" />
                 </video>
 
-                {/* Overlay sederhana */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/10" />
 
-                {/* Tombol Play + Text */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 text-center">
                   <button
                     onClick={togglePlay}
@@ -577,7 +571,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Status Bawah */}
                 <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center">
                   <div className="inline-flex items-center gap-2 rounded-full bg-black/55 px-4 py-1.5 text-[10px] md:text-xs font-medium text-gray-100 backdrop-blur-md border border-white/15">
                     <span
@@ -592,14 +585,15 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Bar Bawah Ringkas */}
               <div className="border-t border-white/10 bg-black/70 px-5 py-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                 <p className="text-xs md:text-sm text-gray-300/85">
                   Siap pesan? Lanjutkan ke halaman booking kapan saja setelah menonton.
                 </p>
+                <Link href="/hotel">
                 <button className="inline-flex items-center justify-center rounded-full bg-[#BFA06D] px-4 py-2 text-[10px] md:text-xs font-semibold tracking-[0.18em] uppercase text-black/90 hover:bg-[#cfb27e] transition-colors">
                   Book Now
                 </button>
+                </Link>
               </div>
             </div>
           </div>

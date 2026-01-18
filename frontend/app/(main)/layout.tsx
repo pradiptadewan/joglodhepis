@@ -3,30 +3,70 @@
 import Navbar from "@/components/Navbar"; 
 import { BookingProvider } from "@/context/BookingContext";
 import { RestoProvider } from "@/context/RestoContext";
+import { useState, useEffect } from "react"; // 1. Import useState & useEffect
 
 export default function MainLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // 2. State untuk visibilitas tombol
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // 3. Effect untuk memantau scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // 4. Fungsi Scroll ke Atas
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <BookingProvider>
       <RestoProvider>
         <Navbar />
 
-        {/* Tambahkan relative dan z-0 pada main agar tidak menumpuk footer */}
-        <main className="min-h-screen relative z-0">
+        <main className="min-h-screen relative">
           {children}
         </main>
 
-        {/* PERUBAHAN UTAMA DI SINI:
-           1. relative z-10: Memastikan footer berada di atas layer lain (agar bisa diklik).
-           2. Styling hover yang lebih tegas.
-        */}
+        {/* 5. Tombol Scroll to Top */}
+        <button
+          onClick={scrollToTop}
+          className={`fixed bottom-8 right-8 z-40 p-3 rounded-full bg-[#BFA06D] text-white shadow-lg transition-all duration-300 hover:bg-[#a38655] hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#BFA06D] focus:ring-offset-2 ${
+            showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+          }`}
+          aria-label="Scroll to top"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            className="h-6 w-6" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+
         <footer id="contactUs" className="relative z-10 bg-[#2D2D2D] text-[#FAF9F6] pt-16 pb-8 border-t-4 border-[#BFA06D]">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+           {/* ... (Isi Footer Tetap Sama) ... */}
+           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             
-            {/* Bagian Alamat */}
             <div className="text-center md:text-left">
               <h2 className="font-serif text-3xl mb-6 text-[#BFA06D] tracking-wider">JOGLO DHEPIS</h2>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -36,18 +76,15 @@ export default function MainLayout({
                 Indonesia
               </p>
               <a 
-                // Menggunakan query search maps agar lebih akurat
                 href="https://www.google.com/maps/search/?api=1&query=Joglo+Dhepis+Tuksongo+Borobudur" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                // Menambahkan hover:scale-105 agar tombol membesar sedikit saat disentuh cursor
                 className="inline-block border border-white/20 px-4 py-2 rounded-full text-xs transition-all duration-300 hover:bg-[#BFA06D] hover:text-white hover:border-[#BFA06D] hover:scale-105 active:scale-95"
               >
                 View on Google Maps →
               </a>
             </div>
 
-            {/* Bagian Contact Us */}
             <div className="text-center">
               <h3 className="font-serif text-xl mb-6 text-white">Contact Us</h3>
               <div className="space-y-4">
@@ -55,7 +92,6 @@ export default function MainLayout({
                   href="https://wa.me/6285801262682" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  // Menambahkan decoration (garis bawah) saat hover
                   className="block text-gray-400 transition-all duration-300 group hover:text-[#BFA06D]"
                 >
                   <span className="block text-xs text-gray-500 uppercase tracking-widest mb-1 group-hover:text-white transition-colors">WhatsApp</span>
@@ -72,29 +108,24 @@ export default function MainLayout({
               </div>
             </div>
 
-            {/* Bagian Social Media */}
             <div className="text-center md:text-right">
               <h3 className="font-serif text-xl mb-6 text-white">Follow Us</h3>
               <div className="flex flex-col gap-4 items-center md:items-end">
                 
-                {/* Instagram */}
                 <a 
                   href="https://www.instagram.com/joglodhepis_homestayandresto?igsh=eGhyMXBhdXBubGFw" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  // Efek hover spesifik warna brand Instagram & transform move
                   className="flex items-center gap-3 text-gray-400 transition-all duration-300 hover:text-[#E1306C] hover:translate-x-[-5px]"
                 >
                   <span className="font-medium">Instagram</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.584-.012-4.849-.069-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
 
-                {/* TikTok */}
                 <a 
                   href="https://www.tiktok.com/@joglodhepis_resto?_r=1&_t=ZS-92UhrYlK4HN" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  // Efek hover spesifik warna TikTok & transform move
                   className="flex items-center gap-3 text-gray-400 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.8)] hover:translate-x-[-5px]"
                 >
                   <span className="font-medium">TikTok</span>

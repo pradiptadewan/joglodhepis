@@ -149,9 +149,20 @@ export default function VWTourList() {
                       {pkg.description}
                     </p>
                     
-                    <span className="inline-block text-xs uppercase tracking-[0.2em] border-b border-[#2D2D2D] pb-1 group-hover:border-[#BFA06D] group-hover:text-[#BFA06D] transition-all font-bold">
-                      View Details
-                    </span>
+                    <div className="mt-auto">
+                      <span className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#2D2D2D] text-white text-xs font-bold uppercase tracking-[0.2em] shadow-lg transition-transform duration-300 active:scale-95">
+                        View Details
+                        <svg 
+                          className="w-3 h-3" 
+                          fill="none" 
+                          viewBox="0 0 24 24" 
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </span>
+                    </div>
+                    
                   </div>
                 </Link>
               </motion.div>

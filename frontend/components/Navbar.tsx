@@ -9,6 +9,7 @@ import { useBooking } from '@/context/BookingContext';
 import toast from 'react-hot-toast';
 
 import { API_URL } from '@/lib/config';
+import { useResto } from '@/context/RestoContext';
 
 export default function Navbar() {
   const { 
@@ -21,8 +22,9 @@ export default function Navbar() {
     openAuthModal 
   } = useAuth();
 
-  const { clearCart } = useBooking();
-  
+  const { clearCart: clearBookingCart } = useBooking();
+  const { clearCart: clearRestoCart } = useResto();
+
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
   
@@ -105,7 +107,10 @@ export default function Navbar() {
 
         if (res.ok) {
             if (authMode === 'login') {
-                login(data.access, { name: formData.email.split('@')[0], email: formData.email });
+                login(data.access, { 
+                name: data.user?.name || formData.email.split('@')[0], 
+                email: data.user?.email || formData.email 
+            });
                 closeAuthModal();
                 setFormData({ fullName: '', email: '', password: '' });
                 
@@ -133,10 +138,10 @@ export default function Navbar() {
   };
 
   const handleLogout = () => {
+    clearBookingCart();
+    clearRestoCart();
     logout();
-    clearCart(); // Reset cart saat logout
-    setIsMobileMenuOpen(false);
-    setShowProfileMenu(false);
+    
     toast.success("Anda telah keluar.");
     router.push('/');
   };
@@ -204,7 +209,7 @@ export default function Navbar() {
   return (
     <>
       {isAuthModalOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
+        <div className="fixed inset-0 z-[999] flex items-center justify-center px-4">
           <div 
             className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
             onClick={closeAuthModal}
