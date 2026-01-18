@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useBooking } from '@/context/BookingContext';
 import { useResto } from '@/context/RestoContext';
 import Script from 'next/script';
+import Image from 'next/image';
 
 import { API_URL, MIDTRANS_CLIENT_KEY } from '@/lib/config';
 import { toast, Toaster } from 'react-hot-toast';
@@ -454,7 +455,13 @@ function PaymentContent() {
                              {availableItems.map((item, idx) => (
                                  <div key={`${item.type}-${item.id}-${idx}`} className="flex gap-3 p-3 border border-gray-100 rounded-xl hover:border-[#BFA06D]/50 transition-all group bg-white cursor-pointer" onClick={() => setSelectedItem(item)}>
                                      <div className="w-20 h-20 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0 relative">
-                                         <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url('${getImageUrl(item.image)}')` }} />
+                                         <Image
+                                            src={getImageUrl(item.image)}
+                                            alt={item.name}
+                                            fill
+                                            className="object-cover object-center"
+                                            sizes="100px"
+                                          />
                                          {item.type === 'drink' && (
                                              <div className="absolute top-1 left-1 bg-blue-500/80 text-white text-[8px] px-1.5 py-0.5 rounded backdrop-blur-sm">DRINK</div>
                                          )}
@@ -626,7 +633,13 @@ function PaymentContent() {
                 </button>
                 
                 <div className="h-56 bg-gray-200 flex-shrink-0 relative">
-                    <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url('${getImageUrl(selectedItem.image)}')` }} />
+                    <Image
+                      src={getImageUrl(selectedItem.image)}
+                      alt={selectedItem.name}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 768px) 100vw, 500px"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-6 left-8 right-8">
                        <span className={`text-[10px] font-bold uppercase tracking-[0.2em] px-2 py-1 rounded border border-white text-white`}>

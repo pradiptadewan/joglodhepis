@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence, Variants } from "framer-motion";
+import Image from 'next/image';
 
 const fadeInUp : Variants = {
   hidden: { opacity: 0, y: 60 },
@@ -307,7 +308,14 @@ export default function Home() {
       {/* SECTION MAIN BANNER */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-24 md:pt-32 pb-12 md:pb-0">
         <div className="absolute inset-0 top-0 z-0">
-          <div className="w-full h-full bg-cover bg-center bg-[url('/hero-bg.jpg')] transform scale-105" /> 
+          <Image
+            src="/hero-bg.jpg"
+            alt="Hero Background"
+            fill
+            priority // Wajib untuk LCP (gambar pertama yang dilihat user)
+            className="object-cover object-center transform scale-105"
+            sizes="100vw"
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
         </div>
         
@@ -331,11 +339,16 @@ export default function Home() {
                 {slides.map((slide, index) => (
                   <div 
                     key={index}
-                    className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
-                      index === activeSlide ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    style={{ backgroundImage: `url('${slide.image}')` }}
-                  />
+                    className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === activeSlide ? 'opacity-100' : 'opacity-0'}`}
+                  >
+                    <Image
+                      src={slide.image}
+                      alt="Slide Image"
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
                 ))}
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/80 to-transparent z-10">
@@ -479,16 +492,34 @@ export default function Home() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="row-span-2 rounded-3xl overflow-hidden shadow-xl">
-              <div className="w-full h-full bg-cover bg-center hover:scale-110 transition duration-700 bg-[url('/minihero1.jpg')]" />
+            <div className="row-span-2 rounded-3xl overflow-hidden shadow-xl relative">
+              <Image
+                src="/minihero1.jpg"
+                alt="Gallery 1"
+                fill
+                className="object-cover object-center hover:scale-110 transition duration-700"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
             </div>
             
-            <div className="rounded-3xl overflow-hidden shadow-xl">
-              <div className="w-full h-full bg-cover bg-center hover:scale-110 transition duration-700 bg-[url('/minihero2.jpg')]" />
+            <div className="rounded-3xl overflow-hidden shadow-xl relative">
+              <Image
+                src="/minihero2.jpg"
+                alt="Gallery 2"
+                fill
+                className="object-cover object-center hover:scale-110 transition duration-700"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
             </div>
             
-            <div className="rounded-3xl overflow-hidden shadow-xl">
-              <div className="w-full h-full bg-cover bg-center hover:scale-110 transition duration-700 bg-[url('/minihero3.jpg')]" />
+            <div className="rounded-3xl overflow-hidden shadow-xl relative">
+              <Image
+                src="/minihero3.jpg"
+                alt="Gallery 3"
+                fill
+                className="object-cover object-center hover:scale-110 transition duration-700"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
             </div>
           </motion.div>
 
@@ -524,7 +555,6 @@ export default function Home() {
           <div className="max-w-5xl mx-auto px-5 md:px-8">
             <div className="relative overflow-hidden rounded-3xl border border-white/8 bg-black/40 shadow-[0_24px_70px_rgba(0,0,0,0.75)]">
               
-              {/* BADGE ATAS (Hanya Muncul di Tablet/Desktop) */}
               <div className="absolute left-4 top-4 z-20 hidden md:inline-flex items-center gap-2 rounded-full bg-black/55 px-3 py-1.5 backdrop-blur-md">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-gray-100/80">
@@ -536,10 +566,10 @@ export default function Home() {
                 <video
                   ref={videoRef}
                   className="absolute inset-0 h-full w-full object-cover"
-                  autoPlay
                   muted
                   loop
                   playsInline
+                  poster="/poster.png"
                 >
                   <source src="/videos/video.mp4" type="video/mp4" />
                 </video>
@@ -619,7 +649,13 @@ export default function Home() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="absolute inset-0 bg-cover bg-center bg-[url('/tes.png')]" />
+              <Image
+                src="/tes.png"
+                alt="Fasilitas"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
               
               <div className="absolute top-8 left-8 bg-[#BFA06D] text-white px-6 py-3 rounded-xl shadow-lg">
                 <div className="text-2xl font-bold font-serif">100%</div>
@@ -785,10 +821,13 @@ export default function Home() {
                       }}
                       className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing"
                     >
-                        <img 
+                        <Image
                           src={rooms[roomSlide].image}
                           alt={rooms[roomSlide].name}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          priority={true}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 
@@ -899,7 +938,13 @@ export default function Home() {
                 )}
 
                 <div className="h-56 bg-gray-200 relative overflow-hidden">
-                   <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                  <Image
+                    src={pkg.image}
+                    alt={pkg.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition duration-500"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                    {pkg.isBestSeller ? (
                      <>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
@@ -1042,7 +1087,13 @@ export default function Home() {
       {/* SECTION REVIEW */}
       <section className="relative py-24 px-6 bg-black overflow-x-hidden">
         <div className="absolute inset-0 z-0">
-           <div className="absolute inset-0 bg-[url('/review.jpg')] bg-cover bg-center opacity-60" />
+           <Image
+              src="/review.jpg"
+              alt="Review Background"
+              fill
+              className="object-cover object-center opacity-60"
+              sizes="100vw"
+            />
            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
         </div>
 
@@ -1119,8 +1170,14 @@ export default function Home() {
                      <div className="flex justify-between items-start mb-6">
                         <div className="flex gap-4 items-center">
                            <div className="w-12 h-12 rounded-full bg-gray-300 overflow-hidden relative">
-                             <div className="absolute inset-0 bg-gray-400" /> 
-                           </div>
+                              <Image
+                                src={review.image}
+                                alt={review.name}
+                                fill
+                                className="object-cover"
+                                sizes="48px"
+                              />
+                            </div>
                            <div>
                              <h4 className="font-bold text-lg">{review.name}</h4>
                              <p className="text-sm text-gray-500">{review.role}</p>

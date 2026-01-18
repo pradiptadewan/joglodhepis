@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { API_URL } from '@/lib/config';
 
@@ -70,10 +71,14 @@ export default function VWPackageDetail() {
   return (
     <div className="min-h-screen bg-[#FAF9F6] text-[#2D2D2D] pb-24">
       <div className="relative h-[60vh] lg:h-[70vh]">
-        <div 
-          className="absolute inset-0 bg-cover bg-center fixed-bg"
-          style={{ backgroundImage: `url('${getImageUrl(pkg.image)}')` }}
-        />
+      <Image
+        src={getImageUrl(pkg.image)}
+        alt={pkg.name}
+        fill
+        priority
+        className="object-cover object-center fixed-bg"
+        sizes="100vw"
+      />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-6 text-center">
             <motion.h1 initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }} className="text-5xl md:text-7xl font-serif mb-6 leading-tight">

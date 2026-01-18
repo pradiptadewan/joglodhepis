@@ -8,6 +8,7 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { useBooking } from '@/context/BookingContext';
 import { useAuth } from '@/context/AuthContext';
 import toast from 'react-hot-toast';
+import Image from 'next/image';
 
 interface Facility {
   id: number;
@@ -229,9 +230,17 @@ function SearchContent() {
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
             transition={{ duration: 10, ease: "linear" }}
-            className="w-full h-full bg-cover bg-center"
-            style={{ backgroundImage: 'url("/heroRoom.jpg")' }} 
-          />
+            className="w-full h-full relative"
+          >
+            <Image
+              src="/heroRoom.jpg"
+              alt="Hero Room"
+              fill
+              priority
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+          </motion.div>
         </div>
         
         <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
@@ -413,9 +422,12 @@ function SearchContent() {
                   >
                     <div className="relative aspect-[4/5] md:aspect-[4/3] overflow-hidden rounded-sm bg-gray-100 mb-6">
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 z-10" />
-                      <div 
-                        className="w-full h-full bg-cover bg-center transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110" 
-                        style={{ backgroundImage: `url('${getImageUrl(room.image)}')` }} 
+                      <Image
+                        src={getImageUrl(room.image)}
+                        alt={room.name}
+                        fill
+                        className="object-cover transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       
                       <div className="absolute top-4 left-4 z-20">
@@ -513,9 +525,16 @@ function SearchContent() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.5 }}
-                      className="absolute inset-0 bg-cover bg-center"
-                      style={{ backgroundImage: `url('${getImageUrl(modalImages[currentSlide])}')` }}
+                      className="absolute inset-0"
                     >
+                      <Image
+                        src={getImageUrl(modalImages[currentSlide])}
+                        alt="Room Detail"
+                        fill
+                        className="object-cover object-center"
+                        sizes="(max-width: 768px) 100vw, 60vw"
+                        priority
+                      />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
                     </motion.div>
                   ) : (
